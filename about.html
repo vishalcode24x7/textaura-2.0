@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Textaura | Free Online Text Tools Suite</title>
+    <meta name="description"
+        content="Learn about Textaura — a free all-in-one text toolkit with Fancy Text Generator, Symbols Library, QR Code Generator, Text Decorator & more. Built for creators, students & social media enthusiasts.">
+    <meta name="keywords"
+        content="about textaura, textaura team, free text tools, fancy text generator about, unicode tools">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Textaura">
+    <meta name="theme-color" content="#5B4FE9">
+    <link rel="canonical" href="https://textaura.com/about">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://textaura.com/about">
+    <meta property="og:title" content="About — Textaura | Free Online Text Tools">
+    <meta property="og:description"
+        content="Textaura is a free all-in-one text toolkit for creators, students & social media lovers.">
+    <meta property="og:site_name" content="Textaura">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/about.css">
+</head>
+
+<body>
+
+    <!-- ══ NAVBAR ══ -->
+    <nav>
+        <span class="nav-logo">Textaura</span>
+        <div class="nav-menu">
+            <a class="nav-item" href="index.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+                </svg>
+                Home
+            </a>
+            <a class="nav-item" href="symbols.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="8" cy="8" r="6" />
+                    <path d="M8 5v3l2 2" />
+                </svg>
+                Symbols
+            </a>
+            <a class="nav-item" href="qrcode.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="2" y="2" width="5" height="5" rx="1" />
+                    <rect x="9" y="2" width="5" height="5" rx="1" />
+                    <rect x="2" y="9" width="5" height="5" rx="1" />
+                    <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+                </svg>
+                QR Code
+            </a>
+            <a class="nav-item" href="decorator.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+                    <path d="M11 3l2 2" />
+                </svg>
+                Decorator
+            </a>
+            <a class="nav-item" href="moretools.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <rect x="2" y="2" width="5" height="5" rx="1" />
+                    <rect x="9" y="2" width="5" height="5" rx="1" />
+                    <rect x="2" y="9" width="5" height="5" rx="1" />
+                    <rect x="9" y="9" width="5" height="5" rx="1" />
+                </svg>
+                More Tools
+            </a>
+            <a class="nav-item active-page" href="about.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="8" cy="8" r="6" />
+                    <path d="M8 7v5M8 5.5v.5" />
+                </svg>
+                About
+            </a>
+        </div>
+        <div class="nav-right">
+            <span class="nav-badge">Free · No Signup</span>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode">
+                <div class="toggle-track"><span>☀️</span><span>🌙</span></div>
+                <div class="toggle-thumb" id="toggleThumb">☀️</div>
+            </button>
+            <button class="hamburger" onclick="toggleDrawer()" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <a class="mob-item" href="index.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+            </svg> Home</a>
+        <a class="mob-item" href="symbols.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 5v3l2 2" />
+            </svg> Symbols</a>
+        <a class="mob-item" href="qrcode.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="5" height="5" rx="1" />
+                <rect x="9" y="2" width="5" height="5" rx="1" />
+                <rect x="2" y="9" width="5" height="5" rx="1" />
+                <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+            </svg> QR Code</a>
+        <a class="mob-item" href="decorator.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+                <path d="M11 3l2 2" />
+            </svg> Decorator</a>
+        <a class="mob-item" href="moretools.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <rect x="2" y="2" width="5" height="5" rx="1" />
+                <rect x="9" y="2" width="5" height="5" rx="1" />
+                <rect x="2" y="9" width="5" height="5" rx="1" />
+                <rect x="9" y="9" width="5" height="5" rx="1" />
+            </svg> More Tools</a>
+        <a class="mob-item" href="about.html" onclick="toggleDrawer()" style="color:var(--primary)"><svg
+                viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 7v5M8 5.5v.5" />
+            </svg> About</a>
+    </div>
+
+
+    <!-- ══ HERO ══ -->
+    <section class="page-hero">
+        <div class="hero-pill">
+            <span class="hero-pill-dot">ℹ️</span>
+            About Textaura
+        </div>
+        <h1>We Build <em>Free Tools</em><br>for Everyone</h1>
+        <p>Textaura is a free all-in-one text toolkit built for creators, students, and social media enthusiasts who
+            want to make their words stand out.</p>
+    </section>
+
+
+    <!-- ══ CONTENT ══ -->
+    <div class="about-wrapper">
+
+        <!-- What is Textaura -->
+        <div class="about-section">
+            <span class="section-tag">What We Do</span>
+            <h2>What is Textaura?</h2>
+            <p>Textaura is a free online platform that provides a growing suite of text utility tools — from fancy
+                Unicode text generators to QR code creation, symbol libraries, text decorators, and much more.</p>
+            <p>Everything on Textaura runs 100% in your browser, requires no account, and is completely free — forever.
+                We believe useful digital tools should be accessible to everyone without barriers.</p>
+
+            <div class="mission-card">
+                <p>"Useful tools should be free, fast, and work for everyone — no signups, no paywalls, no limits."</p>
+            </div>
+        </div>
+
+        <!-- ══ STATS ══ -->
+        <div class="stats-strip">
+            <div class="stats-inner">
+                <div class="stat-item">
+                    <div class="stat-num">10+</div>
+                    <div class="stat-lbl">Free Tools</div>
+                </div>
+                <div class="stat-div"></div>
+                <div class="stat-item">
+                    <div class="stat-num">50+</div>
+                    <div class="stat-lbl">Text Styles</div>
+                </div>
+                <div class="stat-div"></div>
+                <div class="stat-item">
+                    <div class="stat-num">500+</div>
+                    <div class="stat-lbl">Symbols</div>
+                </div>
+                <div class="stat-div"></div>
+                <div class="stat-item">
+                    <div class="stat-num">0</div>
+                    <div class="stat-lbl">Signup Needed</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Mission -->
+        <div class="about-section">
+            <span class="section-tag">Our Mission</span>
+            <h2>Why We Built Textaura</h2>
+            <p>We noticed that many online tools are cluttered with ads, locked behind subscriptions, or require you to
+                create an account just to do something simple. That's frustrating.</p>
+            <p>Textaura was built to be different — a clean, fast, and genuinely free toolkit that respects your time
+                and privacy. No distractions, no data collection, just tools that work.</p>
+        </div>
+
+        <!-- Key Features -->
+        <div class="about-section">
+            <span class="section-tag">Features</span>
+            <h2>What Makes Textaura Different</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <div class="feature-text">
+                        <strong>Instant & Real-time</strong>
+                        <span>All tools update live as you type — no waiting, no clicking Generate.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔒</div>
+                    <div class="feature-text">
+                        <strong>100% Private</strong>
+                        <span>Everything runs in your browser. Your text never leaves your device.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌐</div>
+                    <div class="feature-text">
+                        <strong>Works Everywhere</strong>
+                        <span>Styled text pastes perfectly on Instagram, WhatsApp, Twitter, Discord & more.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎨</div>
+                    <div class="feature-text">
+                        <strong>Dark & Light Mode</strong>
+                        <span>Switch between themes anytime. Your preference is saved automatically.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <div class="feature-text">
+                        <strong>Mobile Friendly</strong>
+                        <span>Fully responsive — works perfectly on phones, tablets, and desktops.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">♾️</div>
+                    <div class="feature-text">
+                        <strong>No Limits</strong>
+                        <span>Use any tool as many times as you want. No caps, no credits, no tiers.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Tools -->
+        <div class="about-section">
+            <span class="section-tag">Our Tools</span>
+            <h2>All Textaura Tools</h2>
+            <p>We are constantly building and improving our toolkit. Here's what's available right now:</p>
+            <div class="tools-list">
+                <a class="tool-item" href="index.html"><span class="tool-dot"></span>Fancy Text Generator</a>
+                <a class="tool-item" href="symbols.html"><span class="tool-dot"></span>Symbols Library</a>
+                <a class="tool-item" href="qrcode.html"><span class="tool-dot"></span>QR Code Generator</a>
+                <a class="tool-item" href="decorator.html"><span class="tool-dot"></span>Text Decorator</a>
+                <a class="tool-item" href="case-converter.html"><span class="tool-dot"></span>Case Converter</a>
+                <a class="tool-item" href="word-counter.html"><span class="tool-dot"></span>Word Counter</a>
+                <a class="tool-item" href="url-shortener.html"><span class="tool-dot"></span>URL Shortener</a>
+                <a class="tool-item" href="color-picker.html"><span class="tool-dot"></span>Color Picker</a>
+                <a class="tool-item" href="password-generator.html"><span class="tool-dot"></span>Password Generator</a>
+                <a class="tool-item" href="lorem-ipsum.html"><span class="tool-dot"></span>Lorem Ipsum Generator</a>
+            </div>
+        </div>
+
+        <!-- Technology -->
+        <div class="about-section">
+            <span class="section-tag">Technology</span>
+            <h2>How Textaura is Built</h2>
+            <p>Textaura is built with pure web technologies — no heavy frameworks, no backend servers, no databases.
+                It's lightweight, fast, and loads instantly on any device or connection.</p>
+            <div class="tech-chips">
+                <span class="tech-chip">HTML5</span>
+                <span class="tech-chip">CSS3</span>
+                <span class="tech-chip">Vanilla JS</span>
+                <span class="tech-chip">Unicode API</span>
+                <span class="tech-chip">Canvas API</span>
+                <span class="tech-chip">Web Share API</span>
+                <span class="tech-chip">Clipboard API</span>
+                <span class="tech-chip">localStorage</span>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="about-section">
+            <span class="section-tag">Contact</span>
+            <h2>Get in Touch</h2>
+            <p>Have feedback, found a bug, or want to suggest a new tool? We'd love to hear from you.</p>
+            <div class="contact-card">
+                <div class="contact-info">
+                    <strong>Textaura Team</strong>
+                    <p>textaura24@gmail.com</p>
+                    <p style="font-size:11px;color:var(--muted);margin:0 !important;">We reply within 24-48 hours.</p>
+                </div>
+                <a class="contact-btn" href="mailto:hello@textaura.com">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round">
+                        <rect x="2" y="4" width="12" height="9" rx="1.5" />
+                        <path d="M2 5l6 5 6-5" />
+                    </svg>
+                    Send Email
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ══ FOOTER ══ -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <strong>Textaura</strong>
+                Free Online Text Tools Suite
+            </div>
+            <div class="footer-links">
+                <a class="footer-link" href="index.html">Home</a>
+                <a class="footer-link" href="symbols.html">Symbols</a>
+                <a class="footer-link" href="qrcode.html">QR Code</a>
+                <a class="footer-link" href="decorator.html">Decorator</a>
+                <a class="footer-link" href="more-tools.html">More Tools</a>
+                <a class="footer-link" href="about.html">About</a>
+                <a class="footer-link" href="policy.html">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 Textaura.com · All rights reserved</span>
+            <span>Fancy Text · Symbols · QR Code · Decorator · Free Tools</span>
+        </div>
+    </footer>
+
+    <script src="scripts/tog-ham.js"></script>
+</body>
+
+</html>

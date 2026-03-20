@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Tools — Textaura | Free Online Text & Utility Tools</title>
+    <meta name="description"
+        content="Explore all free tools by Textaura — Fancy Text Generator, Symbols Library, QR Code Generator, Text Decorator, Case Converter, Word Counter & more. No signup needed.">
+    <meta name="keywords"
+        content="textaura tools, fancy text generator, symbols library, qr code generator, text decorator, case converter, word counter, free online tools">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Textaura">
+    <meta name="theme-color" content="#5B4FE9">
+    <link rel="canonical" href="https://textaura.com/moretools">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://textaura.com/moretools">
+    <meta property="og:title" content="More Tools — Textaura | All Free Online Tools">
+    <meta property="og:description" content="All Textaura tools in one place — free, instant, no signup needed.">
+    <meta property="og:site_name" content="Textaura">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/moretools.css">
+</head>
+
+<body>
+
+    <!-- ══ NAVBAR ══ -->
+    <nav>
+        <span class="nav-logo">Textaura</span>
+        <div class="nav-menu">
+            <a class="nav-item" href="index.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+                </svg>
+                Home
+            </a>
+            <a class="nav-item" href="symbols.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="8" cy="8" r="6" />
+                    <path d="M8 5v3l2 2" />
+                </svg>
+                Symbols
+            </a>
+            <a class="nav-item" href="qrcode.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="2" y="2" width="5" height="5" rx="1" />
+                    <rect x="9" y="2" width="5" height="5" rx="1" />
+                    <rect x="2" y="9" width="5" height="5" rx="1" />
+                    <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+                </svg>
+                QR Code
+            </a>
+            <a class="nav-item" href="decorator.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+                    <path d="M11 3l2 2" />
+                </svg>
+                Decorator
+            </a>
+            <a class="nav-item active-page" href="moretools.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <rect x="2" y="2" width="5" height="5" rx="1" />
+                    <rect x="9" y="2" width="5" height="5" rx="1" />
+                    <rect x="2" y="9" width="5" height="5" rx="1" />
+                    <rect x="9" y="9" width="5" height="5" rx="1" />
+                </svg>
+                More Tools
+            </a>
+            <a class="nav-item" href="about.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="8" cy="8" r="6" />
+                    <path d="M8 7v5M8 5.5v.5" />
+                </svg>
+                About
+            </a>
+        </div>
+        <div class="nav-right">
+            <span class="nav-badge">10 Tools · Free</span>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode">
+                <div class="toggle-track"><span>☀️</span><span>🌙</span></div>
+                <div class="toggle-thumb" id="toggleThumb">☀️</div>
+            </button>
+            <button class="hamburger" onclick="toggleDrawer()" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <a class="mob-item" href="index.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+            </svg> Home
+        </a>
+        <a class="mob-item" href="symbols.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 5v3l2 2" />
+            </svg> Symbols
+        </a>
+        <a class="mob-item" href="qrcode.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="5" height="5" rx="1" />
+                <rect x="9" y="2" width="5" height="5" rx="1" />
+                <rect x="2" y="9" width="5" height="5" rx="1" />
+                <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+            </svg> QR Code
+        </a>
+        <a class="mob-item" href="decorator.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+                <path d="M11 3l2 2" />
+            </svg> Decorator
+        </a>
+        <a class="mob-item" href="moretools.html" onclick="toggleDrawer()" style="color:var(--primary)">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <rect x="2" y="2" width="5" height="5" rx="1" />
+                <rect x="9" y="2" width="5" height="5" rx="1" />
+                <rect x="2" y="9" width="5" height="5" rx="1" />
+                <rect x="9" y="9" width="5" height="5" rx="1" />
+            </svg> More Tools
+        </a>
+        <a class="mob-item" href="about.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 7v5M8 5.5v.5" />
+            </svg> About
+        </a>
+    </div>
+
+
+    <!-- ══ HERO ══ -->
+    <section class="page-hero">
+        <div class="hero-pill">
+            <span class="hero-pill-dot">⚙️</span>
+            All Tools · Free · No Signup
+        </div>
+        <h1>All <em>Textaura Tools</em><br>in One Place</h1>
+        <p>Free, instant, and always available — pick any tool and start using it right away.</p>
+    </section>
+
+    <!-- ══ ALL TOOLS ══ -->
+    <div class="tools-wrapper">
+        <div class="tools-grid">
+
+            <!-- 1. Fancy Text Generator -->
+            <a class="tool-card" href="index.html">
+                <div class="tool-arrow">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2.5 9.5l7-7M4 2.5h5.5v5.5" />
+                    </svg>
+                </div>
+                <div class="tool-icon-wrap" style="background:linear-gradient(135deg,#EEF0FF,#DDD8FF);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <rect x="3" y="5" width="18" height="3" rx="1.5" fill="#5B4FE9" />
+                        <rect x="3" y="11" width="13" height="3" rx="1.5" fill="#5B4FE9" opacity="0.6" />
+                        <rect x="3" y="17" width="9" height="3" rx="1.5" fill="#5B4FE9" opacity="0.35" />
+                    </svg>
+                </div>
+                <div class="tool-name">Fancy Text Generator</div>
+                <div class="tool-desc">Convert text to 17+ Unicode styles — Bold, Italic, Gothic, Script & more. Copy &
+                    paste anywhere.</div>
+                <span class="tool-badge">Active</span>
+            </a>
+
+            <!-- 2. Symbols Library -->
+            <a class="tool-card" href="symbols.html">
+                <div class="tool-arrow">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2.5 9.5l7-7M4 2.5h5.5v5.5" />
+                    </svg>
+                </div>
+                <div class="tool-icon-wrap" style="background:linear-gradient(135deg,#E8FBF7,#C5F2E8);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2l2.4 4.8L20 8l-4 3.9 1 5.6L12 15l-5 2.5 1-5.6L4 8l5.6-.8z" fill="#48C9B0" />
+                    </svg>
+                </div>
+                <div class="tool-name">Symbols Library</div>
+                <div class="tool-desc">Browse and copy 500+ special Unicode symbols — stars, arrows, hearts, math,
+                    currency & more.</div>
+                <span class="tool-badge">Active</span>
+            </a>
+
+            <!-- 3. QR Code Generator -->
+            <a class="tool-card" href="qrcode.html">
+                <div class="tool-arrow">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2.5 9.5l7-7M4 2.5h5.5v5.5" />
+                    </svg>
+                </div>
+                <div class="tool-icon-wrap" style="background:linear-gradient(135deg,#F0F0F0,#E0E0E0);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <rect x="3" y="3" width="7" height="7" rx="1" fill="#333" />
+                        <rect x="14" y="3" width="7" height="7" rx="1" fill="#333" />
+                        <rect x="3" y="14" width="7" height="7" rx="1" fill="#333" />
+                        <rect x="5" y="5" width="3" height="3" fill="white" />
+                        <rect x="16" y="5" width="3" height="3" fill="white" />
+                        <rect x="5" y="16" width="3" height="3" fill="white" />
+                        <rect x="14" y="14" width="2" height="2" fill="#333" />
+                        <rect x="17" y="14" width="2" height="2" fill="#333" />
+                        <rect x="14" y="17" width="2" height="2" fill="#333" />
+                        <rect x="17" y="17" width="4" height="4" rx="0.5" fill="#333" />
+                    </svg>
+                </div>
+                <div class="tool-name">QR Code Generator</div>
+                <div class="tool-desc">Generate QR codes for any URL or text. Custom colors, dot shapes, sizes. Download
+                    as PNG, SVG, JPG.</div>
+                <span class="tool-badge">Active</span>
+            </a>
+
+            <!-- 4. Text Decorator -->
+            <a class="tool-card" href="decorator.html">
+                <div class="tool-arrow">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2.5 9.5l7-7M4 2.5h5.5v5.5" />
+                    </svg>
+                </div>
+                <div class="tool-icon-wrap" style="background:linear-gradient(135deg,#FFF5E9,#FFE5C4);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M4 20l4-4 9-9-3-3-9 9-4 4 3 3z" fill="#FF9F43" />
+                        <path d="M14 4l3 3" stroke="#FF9F43" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="tool-name">Text Decorator</div>
+                <div class="tool-desc">Add beautiful frames and borders around your text for Instagram bios, WhatsApp &
+                    social media.</div>
+                <span class="tool-badge">Active</span>
+            </a>
+
+            <!-- 5. Case Converter -->
+            <a class="tool-card" href="case-converter.html">
+                <div class="tool-arrow">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2.5 9.5l7-7M4 2.5h5.5v5.5" />
+                    </svg>
+                </div>
+                <div class="tool-icon-wrap" style="background:linear-gradient(135deg,#EEF0FF,#DDD8FF);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <text x="2" y="16" font-family="serif" font-size="13" font-weight="bold"
+                            fill="#5B4FE9">AB</text>
+                        <text x="14" y="16" font-family="serif" font-size="11" fill="#A78BFA">cd</text>
+                    </svg>
+                </div>
+                <div class="tool-name">Case Converter</div>
+                <div class="tool-desc">Convert text between UPPER, lower, Title, Sentence, and camelCase formats
+                    instantly.</div>
+                <span class="tool-badge">Active</span>
+            </a>
+
+            <!-- 6. Word Counter -->
+            <a class="tool-card" href="word-counter.html">
+                <div class="tool-arrow">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2.5 9.5l7-7M4 2.5h5.5v5.5" />
+                    </svg>
+                </div>
+                <div class="tool-icon-wrap" style="background:linear-gradient(135deg,#FFF0F0,#FFD9D9);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <rect x="3" y="4" width="4" height="16" rx="1" fill="#FF6B6B" />
+                        <rect x="9" y="8" width="4" height="12" rx="1" fill="#FF9F43" />
+                        <rect x="15" y="6" width="4" height="14" rx="1" fill="#FF6B6B" opacity="0.6" />
+                    </svg>
+                </div>
+                <div class="tool-name">Word Counter</div>
+                <div class="tool-desc">Count words, characters, sentences, and paragraphs in your text. Reading time
+                    estimator included.</div>
+                <span class="tool-badge">Active</span>
+            </a>
+
+            <!-- 7. URL Shortener -->
+            <a class="tool-card" href="url-shortener.html">
+                <div class="tool-arrow">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2.5 9.5l7-7M4 2.5h5.5v5.5" />
+                    </svg>
+                </div>
+                <div class="tool-icon-wrap" style="background:linear-gradient(135deg,#E8FBF7,#C5F2E8);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" stroke="#48C9B0"
+                            stroke-width="2" stroke-linecap="round" />
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" stroke="#48C9B0"
+                            stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="tool-name">URL Shortener</div>
+                <div class="tool-desc">Shorten long URLs into clean, shareable short links with click tracking and
+                    analytics.</div>
+                <span class="tool-badge">Active</span>
+            </a>
+
+            <!-- 8. Color Picker -->
+            <a class="tool-card" href="color-picker.html">
+                <div class="tool-arrow">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2.5 9.5l7-7M4 2.5h5.5v5.5" />
+                    </svg>
+                </div>
+                <div class="tool-icon-wrap" style="background:linear-gradient(135deg,#FFF0F8,#FFD6EE);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="8" cy="8" r="4" fill="#FF6BAE" opacity="0.85" />
+                        <circle cx="16" cy="8" r="4" fill="#5B4FE9" opacity="0.85" />
+                        <circle cx="12" cy="15" r="4" fill="#48C9B0" opacity="0.85" />
+                    </svg>
+                </div>
+                <div class="tool-name">Color Picker</div>
+                <div class="tool-desc">Pick colors and instantly get HEX, RGB, HSL, and CMYK values. Generate beautiful
+                    color palettes.</div>
+                <span class="tool-badge">Active</span>
+            </a>
+
+            <!-- 9. Password Generator -->
+            <a class="tool-card" href="password-generator.html">
+                <div class="tool-arrow">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2.5 9.5l7-7M4 2.5h5.5v5.5" />
+                    </svg>
+                </div>
+                <div class="tool-icon-wrap" style="background:linear-gradient(135deg,#F0F0FF,#DCDCFF);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <rect x="5" y="11" width="14" height="10" rx="2" fill="#5B4FE9" opacity="0.2" stroke="#5B4FE9"
+                            stroke-width="1.5" />
+                        <path d="M8 11V7a4 4 0 0 1 8 0v4" stroke="#5B4FE9" stroke-width="1.5" stroke-linecap="round" />
+                        <circle cx="12" cy="16" r="1.5" fill="#5B4FE9" />
+                    </svg>
+                </div>
+                <div class="tool-name">Password Generator</div>
+                <div class="tool-desc">Generate strong, secure passwords with custom length, symbols, numbers, and
+                    uppercase options.</div>
+                <span class="tool-badge">Active</span>
+            </a>
+
+            <!-- 10. Lorem Ipsum Generator -->
+            <a class="tool-card" href="lorem-ipsum.html">
+                <div class="tool-arrow">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2.5 9.5l7-7M4 2.5h5.5v5.5" />
+                    </svg>
+                </div>
+                <div class="tool-icon-wrap" style="background:linear-gradient(135deg,#FFF5E9,#FFE5C4);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <rect x="3" y="5" width="18" height="2" rx="1" fill="#FF9F43" />
+                        <rect x="3" y="10" width="14" height="2" rx="1" fill="#FF9F43" opacity="0.65" />
+                        <rect x="3" y="15" width="16" height="2" rx="1" fill="#FF9F43" opacity="0.4" />
+                        <rect x="3" y="20" width="10" height="2" rx="1" fill="#FF9F43" opacity="0.22" />
+                    </svg>
+                </div>
+                <div class="tool-name">Lorem Ipsum Generator</div>
+                <div class="tool-desc">Generate placeholder Lorem Ipsum text for designs and mockups. Choose words,
+                    sentences, or paragraphs.</div>
+                <span class="tool-badge">Active</span>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- ══ STATS BAR ══ -->
+    <div class="stats-bar">
+        <div class="stats-inner"> 
+            <div class="stat-item">
+                <div class="stat-num">10</div>
+                <div class="stat-lbl">Total Tools</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-num">100%</div>
+                <div class="stat-lbl">Free Forever</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-num">0</div>
+                <div class="stat-lbl">Signup Required</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-num inf">∞</div>
+                <div class="stat-lbl">Usage Limit</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ══ FOOTER ══ -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <strong>Textaura</strong>
+                Free Online Text Tools Suite
+            </div>
+            <div class="footer-links">
+                <a class="footer-link" href="index.html">Home</a>
+                <a class="footer-link" href="symbols.html">Symbols</a>
+                <a class="footer-link" href="qrcode.html">QR Code</a>
+                <a class="footer-link" href="decorator.html">Decorator</a>
+                <a class="footer-link" href="moretools.html">More Tools</a>
+                <a class="footer-link" href="about.html">About</a>
+                <a class="footer-link" href="policy.html">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 Textaura.com · All rights reserved</span>
+            <span>Fancy Text · Symbols · QR Code · Decorator · Case Converter · Word Counter · More</span>
+        </div>
+    </footer>
+
+    <script src="scripts/moretools.js"></script>
+    <script src="scripts/tog-ham.js"></script>
+</body>
+
+</html>

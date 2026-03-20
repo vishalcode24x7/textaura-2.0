@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Converter — Textaura | UPPER, lower, Title, camelCase & More</title>
+    <meta name="description"
+        content="Free online case converter. Convert text to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case instantly.">
+    <meta name="keywords"
+        content="case converter, uppercase converter, lowercase converter, title case, camelcase generator, snake case, text case changer">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://textaura.com/case-converter">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/case-converter.css">
+</head>
+
+<body>
+
+    <nav>
+        <span class="nav-logo">Textaura</span>
+        <div class="nav-menu">
+            <a class="nav-item" href="index.html"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                    stroke-width="1.8" stroke-linecap="round">
+                    <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+                </svg>Home</a>
+            <a class="nav-item" href="symbols.html"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                    stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="8" cy="8" r="6" />
+                    <path d="M8 5v3l2 2" />
+                </svg>Symbols</a>
+            <a class="nav-item" href="qrcode.html"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="5" height="5" rx="1" />
+                    <rect x="9" y="2" width="5" height="5" rx="1" />
+                    <rect x="2" y="9" width="5" height="5" rx="1" />
+                    <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+                </svg>QR Code</a>
+            <a class="nav-item" href="decorator.html"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                    stroke-width="1.8" stroke-linecap="round">
+                    <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+                    <path d="M11 3l2 2" />
+                </svg>Decorator</a>
+            <a class="nav-item active-page" href="moretools.html"><svg viewBox="0 0 16 16" fill="none"
+                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <rect x="2" y="2" width="5" height="5" rx="1" />
+                    <rect x="9" y="2" width="5" height="5" rx="1" />
+                    <rect x="2" y="9" width="5" height="5" rx="1" />
+                    <rect x="9" y="9" width="5" height="5" rx="1" />
+                </svg>More Tools</a>
+            <a class="nav-item" href="about.html"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                    stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="8" cy="8" r="6" />
+                    <path d="M8 7v5M8 5.5v.5" />
+                </svg>About</a>
+        </div>
+        <div class="nav-right">
+            <span class="nav-badge">Free · No Signup</span>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <div class="toggle-track"><span>☀️</span><span>🌙</span></div>
+                <div class="toggle-thumb" id="toggleThumb">☀️</div>
+            </button>
+            <button class="hamburger" onclick="toggleDrawer()"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-drawer" id="mobileDrawer">
+        <a class="mob-item" href="index.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+            </svg> Home
+        </a>
+        <a class="mob-item" href="symbols.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 5v3l2 2" />
+            </svg> Symbols
+        </a>
+        <a class="mob-item" href="qrcode.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="5" height="5" rx="1" />
+                <rect x="9" y="2" width="5" height="5" rx="1" />
+                <rect x="2" y="9" width="5" height="5" rx="1" />
+                <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+            </svg> QR Code
+        </a>
+        <a class="mob-item" href="decorator.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+                <path d="M11 3l2 2" />
+            </svg> Decorator
+        </a>
+        <a class="mob-item" href="moretools.html" onclick="toggleDrawer()" style="color:var(--primary)">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <rect x="2" y="2" width="5" height="5" rx="1" />
+                <rect x="9" y="2" width="5" height="5" rx="1" />
+                <rect x="2" y="9" width="5" height="5" rx="1" />
+                <rect x="9" y="9" width="5" height="5" rx="1" />
+            </svg> More Tools
+        </a>
+        <a class="mob-item" href="about.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 7v5M8 5.5v.5" />
+            </svg> About
+        </a>
+    </div>
+
+    <section class="page-hero">
+        <div class="hero-pill"><span class="hero-pill-dot">Aa</span>Free · 10 Case Formats · Instant</div>
+        <h1>Text <em>Case Converter</em></h1>
+        <p>Convert text to UPPERCASE, lowercase, Title Case, camelCase, PascalCase, snake_case, kebab-case & more —
+            instantly.</p>
+    </section>
+
+    <div class="tool-wrapper">
+        <div class="card">
+            <div class="card-title">📝 Enter Your Text</div>
+            <textarea id="inputText" rows="5" placeholder="Type or paste your text here…"
+                oninput="updateCases()"></textarea>
+            <div class="input-footer">
+                <span class="meta" id="stats">0 words · 0 chars</span>
+                <button class="clear-btn" onclick="clearAll()">✕ Clear</button>
+            </div>
+        </div>
+
+        <div class="cases-grid" id="casesGrid"></div>
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <strong>Textaura</strong>
+                Free Online Text Tools Suite
+            </div>
+            <div class="footer-links">
+                <a class="footer-link" href="index.html">Home</a>
+                <a class="footer-link" href="symbols.html">Symbols</a>
+                <a class="footer-link" href="qrcode.html">QR Code</a>
+                <a class="footer-link" href="decorator.html">Decorator</a>
+                <a class="footer-link" href="more-tools.html">More Tools</a>
+                <a class="footer-link" href="about.html">About</a>
+                <a class="footer-link" href="policy.html">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 Textaura.com · All rights reserved</span>
+            <span>Fancy Text · Symbols · QR Code · Decorator · Case Converter · Word Counter · More</span>
+        </div>
+    </footer>
+    <div class="toast" id="toast"><span class="toast-dot"></span><span id="toastMsg">Copied!</span></div>
+    <script src="scripts/case-converter.js"></script>
+    <script src="scripts/tog-ham.js"></script>
+</body>
+
+</html>

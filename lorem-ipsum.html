@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem Ipsum Generator — Textaura | Free Placeholder Text Generator</title>
+    <meta name="description"
+        content="Free Lorem Ipsum generator. Generate words, sentences, paragraphs or lists. Choose classic lorem ipsum or random placeholder text. Copy instantly.">
+    <meta name="keywords"
+        content="lorem ipsum generator, placeholder text, dummy text generator, fake text, lorem ipsum online">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://textaura.com/lorem-ipsum">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/lorem-ipsum.css">
+</head>
+
+<body>
+
+    <!-- ══ NAVBAR ══ -->
+    <nav>
+        <span class="nav-logo">Textaura</span>
+        <div class="nav-menu">
+            <a class="nav-item" href="index.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+                </svg>
+                Home
+            </a>
+            <a class="nav-item" href="symbols.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="8" cy="8" r="6" />
+                    <path d="M8 5v3l2 2" />
+                </svg>
+                Symbols
+            </a>
+            <a class="nav-item" href="qrcode.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="2" y="2" width="5" height="5" rx="1" />
+                    <rect x="9" y="2" width="5" height="5" rx="1" />
+                    <rect x="2" y="9" width="5" height="5" rx="1" />
+                    <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+                </svg>
+                QR Code
+            </a>
+            <a class="nav-item" href="decorator.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+                    <path d="M11 3l2 2" />
+                </svg>
+                Decorator
+            </a>
+            <a class="nav-item active-page" href="moretools.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <rect x="2" y="2" width="5" height="5" rx="1" />
+                    <rect x="9" y="2" width="5" height="5" rx="1" />
+                    <rect x="2" y="9" width="5" height="5" rx="1" />
+                    <rect x="9" y="9" width="5" height="5" rx="1" />
+                </svg>
+                More Tools
+            </a>
+            <a class="nav-item" href="about.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="8" cy="8" r="6" />
+                    <path d="M8 7v5M8 5.5v.5" />
+                </svg>
+                About
+            </a>
+        </div>
+        <div class="nav-right">
+            <span class="nav-badge">10 Tools · Free</span>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode">
+                <div class="toggle-track"><span>☀️</span><span>🌙</span></div>
+                <div class="toggle-thumb" id="toggleThumb">☀️</div>
+            </button>
+            <button class="hamburger" onclick="toggleDrawer()" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <a class="mob-item" href="index.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+            </svg> Home
+        </a>
+        <a class="mob-item" href="symbols.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 5v3l2 2" />
+            </svg> Symbols
+        </a>
+        <a class="mob-item" href="qrcode.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="5" height="5" rx="1" />
+                <rect x="9" y="2" width="5" height="5" rx="1" />
+                <rect x="2" y="9" width="5" height="5" rx="1" />
+                <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+            </svg> QR Code
+        </a>
+        <a class="mob-item" href="decorator.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+                <path d="M11 3l2 2" />
+            </svg> Decorator
+        </a>
+        <a class="mob-item" href="moretools.html" onclick="toggleDrawer()" style="color:var(--primary)">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <rect x="2" y="2" width="5" height="5" rx="1" />
+                <rect x="9" y="2" width="5" height="5" rx="1" />
+                <rect x="2" y="9" width="5" height="5" rx="1" />
+                <rect x="9" y="9" width="5" height="5" rx="1" />
+            </svg> More Tools
+        </a>
+        <a class="mob-item" href="about.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 7v5M8 5.5v.5" />
+            </svg> About
+        </a>
+    </div>
+
+    <section class="page-hero">
+        <div class="hero-pill"><span class="hero-pill-dot">📄</span>Words · Sentences · Paragraphs · Lists · HTML</div>
+        <h1><em>Lorem Ipsum</em> Generator</h1>
+        <p>Generate placeholder text for designs and mockups. Choose words, sentences, paragraphs, or lists. Classic
+            lorem ipsum or random text.</p>
+    </section>
+
+    <div class="tool-wrapper">
+        <div class="layout">
+            <div>
+                <div class="card">
+                    <div class="card-title">⚙️ Settings</div>
+
+                    <div class="setting-group">
+                        <span class="sg-label">Generate</span>
+                        <div class="type-tabs">
+                            <button class="type-tab active" data-type="paragraphs"
+                                onclick="selectType(this)">Paragraphs</button>
+                            <button class="type-tab" data-type="sentences" onclick="selectType(this)">Sentences</button>
+                            <button class="type-tab" data-type="words" onclick="selectType(this)">Words</button>
+                            <button class="type-tab" data-type="list" onclick="selectType(this)">List Items</button>
+                        </div>
+                    </div>
+
+                    <div class="setting-group">
+                        <span class="sg-label">Amount</span>
+                        <div class="counter-row">
+                            <button class="counter-btn" onclick="changeCount(-1)">-</button>
+                            <input type="number" class="counter-input" id="countInput" value="3" min="1" max="100"
+                                oninput="generate()">
+                            <button class="counter-btn" onclick="changeCount(1)">+</button>
+                        </div>
+                    </div>
+
+                    <div class="setting-group">
+                        <span class="sg-label">Source</span>
+                        <select id="sourceSelect" onchange="generate()">
+                            <option value="lorem">Classic Lorem Ipsum</option>
+                            <option value="cicero">Cicero's Original</option>
+                            <option value="random">Random Words</option>
+                        </select>
+                    </div>
+
+                    <div class="setting-group">
+                        <span class="sg-label">Format</span>
+                        <select id="formatSelect" onchange="generate()">
+                            <option value="plain">Plain Text</option>
+                            <option value="html">HTML &lt;p&gt; tags</option>
+                            <option value="markdown">Markdown</option>
+                        </select>
+                    </div>
+
+                    <div class="setting-group">
+                        <span class="sg-label">Options</span>
+                        <div class="check-row"><label for="chkStart">Start with "Lorem ipsum…"</label><input
+                                type="checkbox" id="chkStart" checked onchange="generate()"></div>
+                        <div class="check-row"><label for="chkCaps">Capitalize sentences</label><input type="checkbox"
+                                id="chkCaps" checked onchange="generate()"></div>
+                        <div class="check-row"><label for="chkPunct">Add punctuation</label><input type="checkbox"
+                                id="chkPunct" checked onchange="generate()"></div>
+                    </div>
+
+                    <button class="btn-generate" onclick="generate()">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round">
+                            <path d="M1 8a7 7 0 1 0 14 0" />
+                            <path d="M12 4l3 3-3 3" />
+                        </svg>
+                        Generate Text
+                    </button>
+                </div>
+            </div>
+
+            <div>
+                <div class="card">
+                    <div class="card-title">📄 Generated Text</div>
+                    <div class="output-box" id="outputBox">Click "Generate Text" to create Lorem Ipsum placeholder text.
+                    </div>
+                    <div class="output-meta">
+                        <span class="meta-txt" id="outputMeta">—</span>
+                        <button class="copy-all-btn" onclick="copyOutput()">
+                            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round">
+                                <rect x="4" y="4" width="9" height="9" rx="1.5" />
+                                <path d="M2 10V2h8" />
+                            </svg>
+                            Copy All
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ══ FOOTER ══ -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <strong>Textaura</strong>
+                Free Online Text Tools Suite
+            </div>
+            <div class="footer-links">
+                <a class="footer-link" href="index.html">Home</a>
+                <a class="footer-link" href="symbols.html">Symbols</a>
+                <a class="footer-link" href="qrcode.html">QR Code</a>
+                <a class="footer-link" href="decorator.html">Decorator</a>
+                <a class="footer-link" href="moretools.html">More Tools</a>
+                <a class="footer-link" href="about.html">About</a>
+                <a class="footer-link" href="policy.html">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 Textaura.com · All rights reserved</span>
+            <span>Fancy Text · Symbols · QR Code · Decorator · Case Converter · Word Counter · More</span>
+        </div>
+    </footer>
+    <div class="toast" id="toast"><span class="toast-dot"></span><span id="toastMsg">Copied!</span></div>
+
+    <script src="scripts/lorem-ipsum.js"></script>
+    <script src="scripts/tog-ham.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener — Textaura | Free Online Link Shortener</title>
+    <meta name="description"
+        content="Free URL shortener. Shorten long URLs into clean short links instantly. No signup needed. Copy, share, and track your short links.">
+    <meta name="keywords" content="url shortener, link shortener, short url, free url shortener, shorten url, tiny url">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://textaura.com/url-shortener">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/url-shortener.css">
+</head>
+
+<body>
+    <!-- ══ NAVBAR ══ -->
+    <nav>
+        <span class="nav-logo">Textaura</span>
+        <div class="nav-menu">
+            <a class="nav-item" href="index.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+                </svg>
+                Home
+            </a>
+            <a class="nav-item" href="symbols.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="8" cy="8" r="6" />
+                    <path d="M8 5v3l2 2" />
+                </svg>
+                Symbols
+            </a>
+            <a class="nav-item" href="qrcode.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="2" y="2" width="5" height="5" rx="1" />
+                    <rect x="9" y="2" width="5" height="5" rx="1" />
+                    <rect x="2" y="9" width="5" height="5" rx="1" />
+                    <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+                </svg>
+                QR Code
+            </a>
+            <a class="nav-item" href="decorator.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+                    <path d="M11 3l2 2" />
+                </svg>
+                Decorator
+            </a>
+            <a class="nav-item active-page" href="moretools.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <rect x="2" y="2" width="5" height="5" rx="1" />
+                    <rect x="9" y="2" width="5" height="5" rx="1" />
+                    <rect x="2" y="9" width="5" height="5" rx="1" />
+                    <rect x="9" y="9" width="5" height="5" rx="1" />
+                </svg>
+                More Tools
+            </a>
+            <a class="nav-item" href="about.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="8" cy="8" r="6" />
+                    <path d="M8 7v5M8 5.5v.5" />
+                </svg>
+                About
+            </a>
+        </div>
+        <div class="nav-right">
+            <span class="nav-badge">10 Tools · Free</span>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode">
+                <div class="toggle-track"><span>☀️</span><span>🌙</span></div>
+                <div class="toggle-thumb" id="toggleThumb">☀️</div>
+            </button>
+            <button class="hamburger" onclick="toggleDrawer()" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <a class="mob-item" href="index.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+            </svg> Home
+        </a>
+        <a class="mob-item" href="symbols.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 5v3l2 2" />
+            </svg> Symbols
+        </a>
+        <a class="mob-item" href="qrcode.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="5" height="5" rx="1" />
+                <rect x="9" y="2" width="5" height="5" rx="1" />
+                <rect x="2" y="9" width="5" height="5" rx="1" />
+                <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+            </svg> QR Code
+        </a>
+        <a class="mob-item" href="decorator.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+                <path d="M11 3l2 2" />
+            </svg> Decorator
+        </a>
+        <a class="mob-item" href="moretools.html" onclick="toggleDrawer()" style="color:var(--primary)">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <rect x="2" y="2" width="5" height="5" rx="1" />
+                <rect x="9" y="2" width="5" height="5" rx="1" />
+                <rect x="2" y="9" width="5" height="5" rx="1" />
+                <rect x="9" y="9" width="5" height="5" rx="1" />
+            </svg> More Tools
+        </a>
+        <a class="mob-item" href="about.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 7v5M8 5.5v.5" />
+            </svg> About
+        </a>
+    </div>
+
+    <section class="page-hero">
+        <div class="hero-pill"><span class="hero-pill-dot">🔗</span>Instant · Copy · WhatsApp Share · History</div>
+        <h1>Free <em>URL Shortener</em></h1>
+        <p>Paste any long URL and get a clean, short link in seconds. Copy it, share it on WhatsApp, or open it
+            directly.</p>
+    </section>
+
+    <div class="tool-wrapper">
+
+        <div class="card">
+            <div class="card-title">🔗 Shorten a URL</div>
+            <div class="url-input-wrap">
+                <input type="url" class="url-input" id="urlInput"
+                    placeholder="https://your-very-long-url.com/some/long/path?with=parameters"
+                    onkeydown="if(event.key==='Enter')shortenURL()">
+                <button class="shorten-btn" id="shortenBtn" onclick="shortenURL()">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+                            transform="scale(0.65) translate(2,2)" />
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                            transform="scale(0.65) translate(2,2)" />
+                    </svg>
+                    Shorten
+                </button>
+            </div>
+            <div id="errorMsg" style="display:none;margin-top:8px;font-size:12.5px;color:#FF6B6B;font-weight:600"></div>
+        </div>
+
+        <div class="result-box" id="resultBox">
+            <div class="result-label">✅ Short URL Ready</div>
+            <div class="result-url" id="resultUrl"></div>
+            <div class="result-actions">
+                <button class="action-btn btn-copy" onclick="copyShort()">
+                    <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round">
+                        <rect x="4" y="4" width="9" height="9" rx="1.5" />
+                        <path d="M2 10V2h8" />
+                    </svg>
+                    Copy Link
+                </button>
+                <button class="action-btn btn-wa" onclick="shareWA()">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                        <path
+                            d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.522 5.847L.057 23.49l5.773-1.516A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.659-.492-5.189-1.354l-.372-.22-3.427.9.915-3.344-.242-.386A9.965 9.965 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                    </svg>
+                    WhatsApp
+                </button>
+                <button class="action-btn btn-open" onclick="openShort()">
+                    <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5.5 2.5h6v6" />
+                        <path d="M11.5 2.5L2.5 11.5" />
+                    </svg>
+                    Open
+                </button>
+            </div>
+        </div>
+
+        <div class="card" id="histCard" style="display:none">
+            <div class="card-title">🕐 History <button onclick="clearHistory()"
+                    style="float:right;background:none;border:none;cursor:pointer;font-size:11px;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:600">Clear
+                    All</button></div>
+            <div id="histList"></div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">💡 Tips</div>
+            <div class="tips-grid">
+                <div class="tip-item"><span class="tip-icon">⚡</span>
+                    <div class="tip-text"><strong>Instant Shortening</strong><span>Powered by TinyURL API — free and
+                            reliable.</span></div>
+                </div>
+                <div class="tip-item"><span class="tip-icon">📱</span>
+                    <div class="tip-text"><strong>WhatsApp Friendly</strong><span>Share short links directly on WhatsApp
+                            with one tap.</span></div>
+                </div>
+                <div class="tip-item"><span class="tip-icon">💾</span>
+                    <div class="tip-text"><strong>Session History</strong><span>Your shortened links are saved during
+                            this session.</span></div>
+                </div>
+                <div class="tip-item"><span class="tip-icon">🔒</span>
+                    <div class="tip-text"><strong>No Account Needed</strong><span>Shorten links without signing up —
+                            completely free.</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══ FOOTER ══ -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <strong>Textaura</strong>
+                Free Online Text Tools Suite
+            </div>
+            <div class="footer-links">
+                <a class="footer-link" href="index.html">Home</a>
+                <a class="footer-link" href="symbols.html">Symbols</a>
+                <a class="footer-link" href="qrcode.html">QR Code</a>
+                <a class="footer-link" href="decorator.html">Decorator</a>
+                <a class="footer-link" href="moretools.html">More Tools</a>
+                <a class="footer-link" href="about.html">About</a>
+                <a class="footer-link" href="policy.html">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 Textaura.com · All rights reserved</span>
+            <span>Fancy Text · Symbols · QR Code · Decorator · Case Converter · Word Counter · More</span>
+        </div>
+    </footer>
+    <div class="toast" id="toast"><span class="toast-dot"></span><span id="toastMsg">Copied!</span></div>
+
+    <script src="scripts/url-shortener.js"></script>
+    <script src="scripts/tog-ham.js"></script>
+</body>
+
+</html>

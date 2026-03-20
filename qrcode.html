@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator — Textaura | Free Custom QR Code Maker</title>
+    <meta name="description"
+        content="Free QR Code Generator by Textaura. Create custom QR codes with color, size, shape options. Download as PNG or share directly on WhatsApp. No signup needed.">
+    <meta name="keywords"
+        content="qr code generator, free qr code maker, custom qr code, qr code color, qr code download, qr code whatsapp, qr code online">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Textaura">
+    <meta name="theme-color" content="#5B4FE9">
+    <link rel="canonical" href="https://textaura.com/qrcode">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://textaura.com/qrcode">
+    <meta property="og:title" content="QR Code Generator — Textaura | Free Custom QR Maker">
+    <meta property="og:description"
+        content="Create beautiful custom QR codes. Change colors, size, style. Download & share on WhatsApp. Free & instant.">
+    <meta property="og:site_name" content="Textaura">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="QR Code Generator — Textaura">
+    <meta name="twitter:description" content="Free custom QR code generator. Colors, shapes, download, WhatsApp share.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Textaura QR Code Generator",
+      "url": "https://textaura.com/qrcode",
+      "description": "Free custom QR code generator with color, size, shape options and WhatsApp sharing.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/qrcode.css">
+
+</head>
+
+<body>
+
+    <!-- ══ NAVBAR ══ -->
+    <nav>
+        <span class="nav-logo">Textaura</span>
+        <div class="nav-menu">
+            <a class="nav-item" href="index.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+                </svg>
+                Home
+            </a>
+            <a class="nav-item" href="symbols.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="8" cy="8" r="6" />
+                    <path d="M8 5v3l2 2" />
+                </svg>
+                Symbols
+            </a>
+            <a class="nav-item active-page" href="qrcode.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="2" y="2" width="5" height="5" rx="1" />
+                    <rect x="9" y="2" width="5" height="5" rx="1" />
+                    <rect x="2" y="9" width="5" height="5" rx="1" />
+                    <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+                </svg>
+                QR Code
+            </a>
+            <a class="nav-item" href="decorator.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+                    <path d="M11 3l2 2" />
+                </svg>
+                Decorator
+            </a>
+            <a class="nav-item" href="moretools.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <rect x="2" y="2" width="5" height="5" rx="1" />
+                    <rect x="9" y="2" width="5" height="5" rx="1" />
+                    <rect x="2" y="9" width="5" height="5" rx="1" />
+                    <rect x="9" y="9" width="5" height="5" rx="1" />
+                </svg>
+                More Tools
+            </a>
+            <a class="nav-item" href="about.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="8" cy="8" r="6" />
+                    <path d="M8 7v5M8 5.5v.5" />
+                </svg>
+                About
+            </a>
+        </div>
+        <div class="nav-right">
+            <span class="nav-badge">Free · No Signup</span>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode">
+                <div class="toggle-track"><span>☀️</span><span>🌙</span></div>
+                <div class="toggle-thumb" id="toggleThumb">☀️</div>
+            </button>
+            <button class="hamburger" onclick="toggleDrawer()" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <a class="mob-item" href="index.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+            </svg> Home</a>
+        <a class="mob-item" href="symbols.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 5v3l2 2" />
+            </svg> Symbols</a>
+        <a class="mob-item" href="qrcode.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="5" height="5" rx="1" />
+                <rect x="9" y="2" width="5" height="5" rx="1" />
+                <rect x="2" y="9" width="5" height="5" rx="1" />
+                <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+            </svg> QR Code</a>
+        <a class="mob-item" href="decorator.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+                <path d="M11 3l2 2" />
+            </svg> Decorator</a>
+        <a class="mob-item" href="moretools.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <rect x="2" y="2" width="5" height="5" rx="1" />
+                <rect x="9" y="2" width="5" height="5" rx="1" />
+                <rect x="2" y="9" width="5" height="5" rx="1" />
+                <rect x="9" y="9" width="5" height="5" rx="1" />
+            </svg> More Tools</a>
+        <a class="mob-item" href="about.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 7v5M8 5.5v.5" />
+            </svg> About</a>
+    </div>
+
+
+    <!-- ══ HERO ══ -->
+    <section class="page-hero">
+        <div class="hero-pill">
+            <span class="hero-pill-dot">⬛</span>
+            Free · Custom Colors · WhatsApp Share
+        </div>
+        <h1>Free <em>QR Code</em><br>Generator</h1>
+        <p>Create beautiful custom QR codes with your own colors, size, and style. Download as PNG/SVG or share directly
+            on WhatsApp — instantly.</p>
+    </section>
+
+
+    <!-- ══ MAIN LAYOUT ══ -->
+    <div class="qr-layout">
+
+        <!-- LEFT: SETTINGS -->
+        <div class="settings-panel">
+
+            <!-- Content Input -->
+            <div class="setting-card">
+                <div class="setting-card-title">
+                    <span class="stitle-icon">📝</span>
+                    Enter Content
+                </div>
+                <textarea class="qr-input" id="qrText"
+                    placeholder="https://textaura.com&#10;or any text, phone number, email…"
+                    oninput="scheduleGenerate()" rows="4"></textarea>
+                <div class="preset-row">
+                    <button class="preset-btn" onclick="setPreset('https://')">🔗 URL</button>
+                    <button class="preset-btn" onclick="setPreset('mailto:')">📧 Email</button>
+                    <button class="preset-btn" onclick="setPreset('tel:+91')">📞 Phone</button>
+                    <button class="preset-btn" onclick="setPreset('WIFI:T:WPA;S:;P:;;')">📶 WiFi</button>
+                    <button class="preset-btn"
+                        onclick="setPreset('BEGIN:VCARD\nVERSION:3.0\nFN:\nTEL:\nEMAIL:\nEND:VCARD')">👤 vCard</button>
+                    <button class="preset-btn" onclick="setPreset('upi://pay?pa=&pn=&am=&cu=INR')">💳 UPI</button>
+                </div>
+            </div>
+
+            <!-- Colors -->
+            <div class="setting-card">
+                <div class="setting-card-title">
+                    <span class="stitle-icon">🎨</span>
+                    Colors
+                </div>
+                <div class="setting-row">
+                    <label>QR Color</label>
+                    <div class="color-pair">
+                        <span class="color-hex" id="fgHex">#000000</span>
+                        <input type="color" id="fgColor" value="#000000"
+                            oninput="updateColorHex('fg');scheduleGenerate()">
+                    </div>
+                </div>
+                <div class="setting-row">
+                    <label>Background</label>
+                    <div class="color-pair">
+                        <span class="color-hex" id="bgHex">#ffffff</span>
+                        <input type="color" id="bgColor" value="#ffffff"
+                            oninput="updateColorHex('bg');scheduleGenerate()">
+                    </div>
+                </div>
+                <!-- Color Presets -->
+                <div style="margin-top:10px;">
+                    <p
+                        style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">
+                        Color Presets</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:7px;" id="colorPresets"></div>
+                </div>
+            </div>
+
+            <!-- Size -->
+            <div class="setting-card">
+                <div class="setting-card-title">
+                    <span class="stitle-icon">📐</span>
+                    Size & Margin
+                </div>
+                <div class="setting-row">
+                    <label>Size</label>
+                    <input type="range" id="qrSize" min="100" max="600" value="300" step="10"
+                        oninput="document.getElementById('sizeVal').textContent=this.value+'px';scheduleGenerate()">
+                    <span class="range-val" id="sizeVal">300px</span>
+                </div>
+                <div class="setting-row">
+                    <label>Margin</label>
+                    <input type="range" id="qrMargin" min="0" max="10" value="2" step="1"
+                        oninput="document.getElementById('marginVal').textContent=this.value;scheduleGenerate()">
+                    <span class="range-val" id="marginVal">2</span>
+                </div>
+            </div>
+
+            <!-- Shape / Style -->
+            <div class="setting-card">
+                <div class="setting-card-title">
+                    <span class="stitle-icon">🔷</span>
+                    Dot Style
+                </div>
+                <div class="shape-options" id="dotStyles"></div>
+            </div>
+
+            <!-- Corner Style -->
+            <div class="setting-card">
+                <div class="setting-card-title">
+                    <span class="stitle-icon">🔲</span>
+                    Corner Style
+                </div>
+                <div class="shape-options" id="cornerStyles"></div>
+            </div>
+
+            <!-- Error Correction -->
+            <div class="setting-card">
+                <div class="setting-card-title">
+                    <span class="stitle-icon">🛡️</span>
+                    Error Correction
+                </div>
+                <div class="ec-options" id="ecOptions">
+                    <button class="ec-btn selected" data-ec="L" onclick="selectEC(this)">L<small>~7%</small></button>
+                    <button class="ec-btn" data-ec="M" onclick="selectEC(this)">M<small>~15%</small></button>
+                    <button class="ec-btn" data-ec="Q" onclick="selectEC(this)">Q<small>~25%</small></button>
+                    <button class="ec-btn" data-ec="H" onclick="selectEC(this)">H<small>~30%</small></button>
+                </div>
+                <p style="font-size:11px;color:var(--muted);margin-top:8px;line-height:1.6;">Higher = more recovery if
+                    QR is damaged. Use H to add a logo over the QR.</p>
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT: PREVIEW -->
+        <div class="preview-panel">
+
+            <p class="sec-label">Live Preview</p>
+
+            <div class="qr-preview-box">
+                <!-- Canvas -->
+                <div class="qr-canvas-wrap">
+                    <div class="qr-empty-state" id="emptyState">
+                        <div class="qr-empty-icon">⬛</div>
+                        <p class="qr-empty-text">Enter content on the left to generate your QR code</p>
+                    </div>
+                    <canvas id="qrCanvas" style="display:none;"></canvas>
+                </div>
+
+                <!-- Stats -->
+                <div class="qr-stats" id="qrStats" style="display:none;">
+                    <div class="qr-stat">
+                        <div class="qr-stat-num" id="statSize">—</div>
+                        <div class="qr-stat-lbl">Size (px)</div>
+                    </div>
+                    <div class="qr-stat">
+                        <div class="qr-stat-num" id="statChars">—</div>
+                        <div class="qr-stat-lbl">Characters</div>
+                    </div>
+                    <div class="qr-stat">
+                        <div class="qr-stat-num" id="statEC">L</div>
+                        <div class="qr-stat-lbl">Error Level</div>
+                    </div>
+                    <div class="qr-stat">
+                        <div class="qr-stat-num" id="statVersion">—</div>
+                        <div class="qr-stat-lbl">QR Version</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download Format -->
+            <div class="setting-card">
+                <div class="setting-card-title">
+                    <span class="stitle-icon">💾</span>
+                    Download Format
+                </div>
+                <div class="format-row">
+                    <button class="fmt-btn selected" data-fmt="png" onclick="selectFmt(this)">PNG</button>
+                    <button class="fmt-btn" data-fmt="jpg" onclick="selectFmt(this)">JPG</button>
+                    <button class="fmt-btn" data-fmt="svg" onclick="selectFmt(this)">SVG</button>
+                    <button class="fmt-btn" data-fmt="webp" onclick="selectFmt(this)">WebP</button>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-btns">
+                <button class="action-btn btn-primary" onclick="downloadQR()" id="downloadBtn" disabled>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M8 2v8M5 7l3 3 3-3" />
+                        <rect x="2" y="12" width="12" height="2" rx="1" />
+                    </svg>
+                    Download QR Code
+                </button>
+
+                <button class="action-btn btn-whatsapp" onclick="shareWhatsApp()" id="whatsappBtn" disabled>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                        <path
+                            d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.522 5.847L.057 23.49l5.773-1.516A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.659-.492-5.189-1.354l-.372-.22-3.427.9.915-3.344-.242-.386A9.965 9.965 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                    </svg>
+                    Share on WhatsApp
+                </button>
+
+                <div class="btn-row">
+                    <button class="action-btn btn-secondary" onclick="copyQRImage()" id="copyImgBtn" disabled>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round">
+                            <rect x="4" y="4" width="9" height="9" rx="1.5" />
+                            <path d="M2 10V2h8" />
+                        </svg>
+                        Copy Image
+                    </button>
+                    <button class="action-btn btn-secondary" onclick="resetAll()">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 8a6 6 0 1 1 1.5 4" />
+                            <path d="M2 12V8h4" />
+                        </svg>
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ══ INFO STRIP ══ -->
+    <div class="qr-info">
+        <div class="qr-info-inner">
+            <div class="qr-info-block">
+                <h3><span class="info-icon" style="background:var(--primary-light)">⚡</span>Instant Generation</h3>
+                <p>QR code updates live as you type. No button needed — just enter your content and customize.</p>
+            </div>
+            <div class="qr-info-block">
+                <h3><span class="info-icon" style="background:var(--primary-light)">🎨</span>Full Customization</h3>
+                <p>Change colors, size, dot style, corner style, margin, and error correction level to match your brand.
+                </p>
+            </div>
+            <div class="qr-info-block">
+                <h3><span class="info-icon" style="background:var(--primary-light)">📲</span>WhatsApp Share</h3>
+                <p>Share your QR code directly on WhatsApp with one click — no download needed for quick sharing.</p>
+            </div>
+            <div class="qr-info-block">
+                <h3><span class="info-icon" style="background:var(--primary-light)">💾</span>Multiple Formats</h3>
+                <p>Download your QR code as PNG, JPG, WebP, or SVG — high resolution, ready for print or digital use.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ══ FOOTER ══ -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <strong>Textaura</strong>
+                Free Online Text Tools Suite
+            </div>
+            <div class="footer-links">
+                <a class="footer-link" href="index.html">Home</a>
+                <a class="footer-link" href="symbols.html">Symbols</a>
+                <a class="footer-link" href="qrcode.html">QR Code</a>
+                <a class="footer-link" href="decorator.html">Decorator</a>
+                <a class="footer-link" href="moretools.html">More Tools</a>
+                <a class="footer-link" href="about.html">About</a>
+                <a class="footer-link" href="policy.html">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 Textaura.com · All rights reserved</span>
+            <span>QR Code Generator · Custom Colors · Download · WhatsApp Share</span>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast">
+        <span class="toast-dot"></span>
+        <span id="toastMsg">Done!</span>
+    </div>
+
+    <!-- qrcode-generator: exposes isDark(row,col) for custom drawing -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <script src="scripts/qrcode.js"></script>
+    <script src="scripts/tog-ham.js"></script>
+
+</body>
+
+</html>

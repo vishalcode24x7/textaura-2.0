@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Decorator — Textaura | Add Beautiful Borders & Frames to Your Text</title>
+    <meta name="description"
+        content="Free online text decorator tool by Textaura. Add beautiful Unicode borders, frames, and decorations to your text for Instagram bios, WhatsApp statuses, Twitter & more. 20+ decoration styles. No signup needed.">
+    <meta name="keywords"
+        content="text decorator, text border generator, fancy text borders, Instagram bio decorator, text frame generator, unicode borders, stylish text decoration, cool text frames, bio decorator">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Textaura">
+    <meta name="theme-color" content="#5B4FE9">
+    <link rel="canonical" href="https://textaura.com/decorator">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://textaura.com/decorator">
+    <meta property="og:title" content="Text Decorator — Textaura | Free Online Text Border Generator">
+    <meta property="og:description"
+        content="Add beautiful borders and frames to your text. 20+ decoration styles. Free & instant.">
+    <meta property="og:site_name" content="Textaura">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Text Decorator — Textaura">
+    <meta name="twitter:description" content="Add beautiful Unicode borders & frames to your text. Free & instant.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Textaura Text Decorator",
+      "url": "https://textaura.com/decorator",
+      "description": "Free online text decorator — add beautiful Unicode borders, frames and decorations to any text for social media.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/decorator.css">
+
+</head>
+
+<body>
+
+    <nav>
+        <span class="nav-logo">Textaura</span>
+
+        <div class="nav-menu">
+            <a class="nav-item" href="index.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+                </svg>
+                Home
+            </a>
+
+            <a class="nav-item" href="symbols.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="8" cy="8" r="6" />
+                    <path d="M8 5v3l2 2" />
+                </svg>
+                Symbols
+            </a>
+
+            <a class="nav-item" href="qrcode.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="2" y="2" width="5" height="5" rx="1" />
+                    <rect x="9" y="2" width="5" height="5" rx="1" />
+                    <rect x="2" y="9" width="5" height="5" rx="1" />
+                    <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+                </svg>
+                QR Code
+            </a>
+
+            <a class="nav-item active-page" href="decorator.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+                    <path d="M11 3l2 2" />
+                </svg>
+                Decorator
+            </a>
+
+            <a class="nav-item" href="moretools.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <rect x="2" y="2" width="5" height="5" rx="1" />
+                    <rect x="9" y="2" width="5" height="5" rx="1" />
+                    <rect x="2" y="9" width="5" height="5" rx="1" />
+                    <rect x="9" y="9" width="5" height="5" rx="1" />
+                </svg>
+                More Tools
+            </a>
+
+            <a class="nav-item" href="about.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="8" cy="8" r="6" />
+                    <path d="M8 7v5M8 5.5v.5" />
+                </svg>
+                About
+            </a>
+        </div>
+
+        <div class="nav-right">
+            <span class="nav-badge">20+ Styles · Free</span>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode">
+                <div class="toggle-track"><span>☀️</span><span>🌙</span></div>
+                <div class="toggle-thumb" id="toggleThumb">☀️</div>
+            </button>
+            <button class="hamburger" onclick="toggleDrawer()" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <a class="mob-item" href="index.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+            </svg> Home</a>
+        <a class="mob-item" href="symbols.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 5v3l2 2" />
+            </svg> Symbols</a>
+        <a class="mob-item" href="qrcode.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="5" height="5" rx="1" />
+                <rect x="9" y="2" width="5" height="5" rx="1" />
+                <rect x="2" y="9" width="5" height="5" rx="1" />
+                <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+            </svg> QR Code</a>
+        <a class="mob-item" href="decorator.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+                <path d="M11 3l2 2" />
+            </svg> Decorator</a>
+        <a class="mob-item" href="moretools.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                stroke-width="1.8" stroke-linecap="round">
+                <rect x="2" y="2" width="5" height="5" rx="1" />
+                <rect x="9" y="2" width="5" height="5" rx="1" />
+                <rect x="2" y="9" width="5" height="5" rx="1" />
+                <rect x="9" y="9" width="5" height="5" rx="1" />
+            </svg> More Tools</a>
+        <a class="mob-item" href="about.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                stroke-width="1.8" stroke-linecap="round">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 7v5M8 5.5v.5" />
+            </svg> About</a>
+    </div>
+
+
+    <!-- ══ HERO ══ -->
+    <section class="page-hero">
+        <div class="hero-pill">
+            <span class="hero-pill-dot">✏️</span>
+            20+ Decoration Styles · Free · No Signup
+        </div>
+        <h1>Beautiful <em>Text Decorator</em><br>for Social Media</h1>
+        <p>Add stunning Unicode borders, frames and decorations to your text — perfect for Instagram bios, WhatsApp
+            statuses, Twitter profiles & more.</p>
+    </section>
+
+
+    <!-- ══ MAIN LAYOUT ══ -->
+    <div class="dec-layout">
+
+        <!-- LEFT: INPUT PANEL -->
+        <div class="input-panel">
+
+            <p class="panel-label">Enter Your Text</p>
+            <div class="dec-input-card">
+                <div class="input-top">
+                    <div class="input-dots">
+                        <span class="dot1"></span>
+                        <span class="dot2"></span>
+                        <span class="dot3"></span>
+                    </div>
+                    <span class="input-label">Your Text</span>
+                </div>
+                <textarea id="decInput" placeholder="Type here… e.g. Hello World" oninput="updateDecorations()" rows="4"
+                    aria-label="Enter text to decorate"></textarea>
+                <div class="input-bottom">
+                    <span class="char-count" id="charCount">0 characters</span>
+                    <button class="clear-btn" onclick="clearAll()">✕ Clear</button>
+                </div>
+            </div>
+
+            <!-- Category filter -->
+            <p class="panel-label">Filter by Category</p>
+            <div class="cat-filter" id="catFilter"></div>
+
+            <!-- Live preview -->
+            <div class="preview-box">
+                <p class="preview-box-label">Live Preview</p>
+                <div class="preview-text" id="livePreview">Your decorated text will appear here…</div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT: RESULTS -->
+        <div class="results-panel">
+            <div class="results-hd">
+                <h2>Decoration Styles</h2>
+                <span id="countLabel">20 styles ready</span>
+            </div>
+            <div class="dec-grid" id="decGrid" role="list"></div>
+        </div>
+
+    </div>
+
+
+    <!-- ══ INFO STRIP ══ -->
+    <div class="dec-info">
+        <div class="dec-info-inner">
+            <div class="dec-info-block">
+                <h3><span class="info-icon" style="background:var(--primary-light)">⚡</span>Instant Preview</h3>
+                <p>All decoration styles update live as you type. See every style at once and pick your favourite.</p>
+            </div>
+            <div class="dec-info-block">
+                <h3><span class="info-icon" style="background:var(--primary-light)">🔤</span>Unicode Borders</h3>
+                <p>These decorations use real Unicode characters — they paste and display correctly on any platform.</p>
+            </div>
+            <div class="dec-info-block">
+                <h3><span class="info-icon" style="background:var(--primary-light)">📱</span>Works Everywhere</h3>
+                <p>Instagram bio, WhatsApp status, Twitter name, Discord, Telegram — paste your decorated text anywhere.
+                </p>
+            </div>
+            <div class="dec-info-block">
+                <h3><span class="info-icon" style="background:var(--primary-light)">🔒</span>100% Free</h3>
+                <p>No account, no login, no limits. Everything runs in your browser — your text never leaves your
+                    device.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ══ FOOTER (same as main site) ══ -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <strong>Textaura</strong>
+                Free Online Text Tools Suite
+            </div>
+            <div class="footer-links">
+                <a class="footer-link" href="index.html">Home</a>
+                <a class="footer-link" href="symbols.html">Symbols</a>
+                <a class="footer-link" href="qrcode.html">QR Code</a>
+                <a class="footer-link" href="decorator.html">Decorator</a>
+                <a class="footer-link" href="moretools.html">More Tools</a>
+                <a class="footer-link" href="about.html">About</a>
+                <a class="footer-link" href="policy.html">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 Textaura.com · All rights reserved</span>
+            <span>Text Decorator · Border Generator · Fancy Frames · Unicode Styles</span>
+        </div>
+    </footer>
+
+    <!-- Toast (same as main site) -->
+    <div class="toast" id="toast">
+        <span class="toast-dot"></span>
+        <span id="toastMsg">Copied!</span>
+    </div>
+
+    <script src="scripts/decorator.js"></script>
+    <script src="scripts/tog-ham.js"></script>
+
+</body>
+
+</html>

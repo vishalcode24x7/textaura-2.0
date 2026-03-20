@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter — Textaura | Free Online Word & Character Counter</title>
+    <meta name="description"
+        content="Free online word counter. Count words, characters, sentences, paragraphs, reading time. Keyword density, unique words, top keywords analysis.">
+    <meta name="keywords"
+        content="word counter, character counter, letter counter, sentence counter, reading time calculator, word count tool, text analyzer">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://textaura.com/word-counter">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/word-counter.css">
+</head>
+
+<body>
+
+    <nav>
+        <span class="nav-logo">Textaura</span>
+        <div class="nav-menu">
+            <a class="nav-item" href="index.html"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                    stroke-width="1.8" stroke-linecap="round">
+                    <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+                </svg>Home</a>
+            <a class="nav-item" href="symbols.html"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                    stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="8" cy="8" r="6" />
+                    <path d="M8 5v3l2 2" />
+                </svg>Symbols</a>
+            <a class="nav-item" href="qrcode.html"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="5" height="5" rx="1" />
+                    <rect x="9" y="2" width="5" height="5" rx="1" />
+                    <rect x="2" y="9" width="5" height="5" rx="1" />
+                    <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+                </svg>QR Code</a>
+            <a class="nav-item" href="decorator.html"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                    stroke-width="1.8" stroke-linecap="round">
+                    <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+                    <path d="M11 3l2 2" />
+                </svg>Decorator</a>
+            <a class="nav-item active-page" href="more-tools.html"><svg viewBox="0 0 16 16" fill="none"
+                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <rect x="2" y="2" width="5" height="5" rx="1" />
+                    <rect x="9" y="2" width="5" height="5" rx="1" />
+                    <rect x="2" y="9" width="5" height="5" rx="1" />
+                    <rect x="9" y="9" width="5" height="5" rx="1" />
+                </svg>More Tools</a>
+            <a class="nav-item" href="about.html"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                    stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="8" cy="8" r="6" />
+                    <path d="M8 7v5M8 5.5v.5" />
+                </svg>About</a>
+        </div>
+        <div class="nav-right">
+            <span class="nav-badge">Free · No Signup</span>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <div class="toggle-track"><span>☀️</span><span>🌙</span></div>
+                <div class="toggle-thumb" id="toggleThumb">☀️</div>
+            </button>
+            <button class="hamburger" onclick="toggleDrawer()"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-drawer" id="mobileDrawer">
+        <a class="mob-item" href="index.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+            </svg> Home
+        </a>
+        <a class="mob-item" href="symbols.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 5v3l2 2" />
+            </svg> Symbols
+        </a>
+        <a class="mob-item" href="qrcode.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="5" height="5" rx="1" />
+                <rect x="9" y="2" width="5" height="5" rx="1" />
+                <rect x="2" y="9" width="5" height="5" rx="1" />
+                <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+            </svg> QR Code
+        </a>
+        <a class="mob-item" href="decorator.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+                <path d="M11 3l2 2" />
+            </svg> Decorator
+        </a>
+        <a class="mob-item" href="moretools.html" onclick="toggleDrawer()" style="color:var(--primary)">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <rect x="2" y="2" width="5" height="5" rx="1" />
+                <rect x="9" y="2" width="5" height="5" rx="1" />
+                <rect x="2" y="9" width="5" height="5" rx="1" />
+                <rect x="9" y="9" width="5" height="5" rx="1" />
+            </svg> More Tools
+        </a>
+        <a class="mob-item" href="about.html" onclick="toggleDrawer()">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 7v5M8 5.5v.5" />
+            </svg> About
+        </a>
+    </div>
+
+    <section class="page-hero">
+        <div class="hero-pill"><span class="hero-pill-dot">📊</span>Words · Characters · Reading Time · Keywords</div>
+        <h1><em>Word Counter</em> & Text Analyzer</h1>
+        <p>Count words, characters, sentences, paragraphs. Get reading time, keyword density, and reading level — all in
+            real time.</p>
+    </section>
+
+    <div class="tool-wrapper">
+        <div class="layout">
+            <div>
+                <div class="card">
+                    <div class="card-title">📝 Your Text</div>
+                    <textarea id="inputText" rows="12" placeholder="Type or paste your text here to analyze…"
+                        oninput="analyze()"></textarea>
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+                        <span style="font-size:11px;color:var(--muted);font-family:'Fira Code',monospace"
+                            id="liveCount">0 words · 0 chars</span>
+                        <button class="clear-btn" onclick="clearAll()">✕ Clear</button>
+                    </div>
+                </div>
+
+                <!-- TOP KEYWORDS -->
+                <div class="card">
+                    <div class="card-title">🔑 Top Keywords</div>
+                    <div id="kwList">
+                        <p style="font-size:13px;color:var(--muted);font-style:italic">Type text to see keyword
+                            analysis…</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <!-- MAIN STATS -->
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-box-num" id="sWords">0</div>
+                        <div class="stat-box-lbl">Words</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-box-num" id="sChars">0</div>
+                        <div class="stat-box-lbl">Characters</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-box-num" id="sSents">0</div>
+                        <div class="stat-box-lbl">Sentences</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-box-num" id="sParas">0</div>
+                        <div class="stat-box-lbl">Paragraphs</div>
+                    </div>
+                </div>
+
+                <!-- DETAILED -->
+                <div class="card">
+                    <div class="card-title">📋 Detailed Stats</div>
+                    <div class="detail-row"><span class="detail-lbl">Characters (no spaces)</span><span
+                            class="detail-val" id="dCharsNoSpace">0</span></div>
+                    <div class="detail-row"><span class="detail-lbl">Unique words</span><span class="detail-val"
+                            id="dUnique">0</span></div>
+                    <div class="detail-row"><span class="detail-lbl">Avg. word length</span><span class="detail-val"
+                            id="dAvgWord">0</span></div>
+                    <div class="detail-row"><span class="detail-lbl">Avg. sentence length</span><span class="detail-val"
+                            id="dAvgSent">0</span></div>
+                    <div class="detail-row"><span class="detail-lbl">Reading time (200wpm)</span><span
+                            class="detail-val" id="dReadTime">0 sec</span></div>
+                    <div class="detail-row"><span class="detail-lbl">Speaking time (130wpm)</span><span
+                            class="detail-val" id="dSpeakTime">0 sec</span></div>
+                    <div class="detail-row"><span class="detail-lbl">Reading level</span><span class="detail-val"
+                            id="dLevel">—</span></div>
+                </div>
+
+                <!-- CHAR BREAKDOWN -->
+                <div class="card">
+                    <div class="card-title">🔤 Character Breakdown</div>
+                    <div class="detail-row"><span class="detail-lbl">Letters</span><span class="detail-val"
+                            id="dLetters">0</span></div>
+                    <div class="detail-row"><span class="detail-lbl">Numbers</span><span class="detail-val"
+                            id="dNumbers">0</span></div>
+                    <div class="detail-row"><span class="detail-lbl">Spaces</span><span class="detail-val"
+                            id="dSpaces">0</span></div>
+                    <div class="detail-row"><span class="detail-lbl">Punctuation</span><span class="detail-val"
+                            id="dPunct">0</span></div>
+                    <div class="detail-row"><span class="detail-lbl">Uppercase letters</span><span class="detail-val"
+                            id="dUpper">0</span></div>
+                    <div class="detail-row"><span class="detail-lbl">Lowercase letters</span><span class="detail-val"
+                            id="dLower">0</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <strong>Textaura</strong>
+                Free Online Text Tools Suite
+            </div>
+            <div class="footer-links">
+                <a class="footer-link" href="index.html">Home</a>
+                <a class="footer-link" href="symbols.html">Symbols</a>
+                <a class="footer-link" href="qrcode.html">QR Code</a>
+                <a class="footer-link" href="decorator.html">Decorator</a>
+                <a class="footer-link" href="moretools.html">More Tools</a>
+                <a class="footer-link" href="about.html">About</a>
+                <a class="footer-link" href="policy.html">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 Textaura.com · All rights reserved</span>
+            <span>Fancy Text · Symbols · QR Code · Decorator · Case Converter · Word Counter · More</span>
+        </div>
+    </footer>
+    <div class="toast" id="toast"><span class="toast-dot"></span><span id="toastMsg">Done!</span></div>
+
+    <script src="scripts/word-counter.js"></script>
+    <script src="scripts/tog-ham.js"></script>
+</body>
+
+</html>
