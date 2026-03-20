@@ -433,7 +433,7 @@ textarea::placeholder {
     border-radius: 16px 16px 0 0;
 }
 
-.cc1::before {
+/* .cc1::before {
     background: linear-gradient(90deg, var(--c1), #FF8E53);
 }
 
@@ -455,7 +455,7 @@ textarea::placeholder {
 
 .cc6::before {
     background: linear-gradient(90deg, var(--c6), #56CCF2);
-}
+} */
 
 .style-card:hover.cc1 {
     box-shadow: 0 8px 24px rgba(255, 107, 107, 0.15);
