@@ -773,8 +773,8 @@ html.dark .toggle-thumb {
     bottom: 24px;
     left: 50%;
     transform: translateX(-50%) translateY(80px);
-    background: var(--ink);
-    color: #fff;
+    background: var(--white);
+    color: var(--ink);
     font-size: 13px;
     font-weight: 600;
     padding: 11px 22px;
