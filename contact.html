@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — Textaura | Get in Touch</title>
+    <meta name="description"
+        content="Contact Textaura — Have a question, suggestion, or bug to report? Reach out to our team via email. We reply within 24-48 hours.">
+    <meta name="keywords" content="contact textaura, textaura support, feedback, bug report, suggest a tool">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Textaura">
+    <meta name="theme-color" content="#5B4FE9">
+    <link rel="icon" href="assets/FullLogo.ico" type="image/x-icon">
+    <link rel="canonical" href="https://textaura.org/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://textaura.org/contact.html">
+    <meta property="og:title" content="Contact Us — Textaura">
+    <meta property="og:description" content="Get in touch with the Textaura font designer team. We reply within 24-48 hours.">
+    <meta property="og:site_name" content="Textaura">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/contact.css">
+</head>
+
+<body>
+
+    <nav>
+        <span class="nav-logo">Textaura</span>
+        <div class="nav-menu">
+            <a class="nav-item" href="index.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+                </svg>
+                Home
+            </a>
+            <a class="nav-item" href="symbols.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="8" cy="8" r="6" />
+                    <path d="M8 5v3l2 2" />
+                </svg>
+                Symbols
+            </a>
+            <a class="nav-item" href="qrcode.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="2" y="2" width="5" height="5" rx="1" />
+                    <rect x="9" y="2" width="5" height="5" rx="1" />
+                    <rect x="2" y="9" width="5" height="5" rx="1" />
+                    <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+                </svg>
+                QR Code
+            </a>
+            <a class="nav-item" href="decorator.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+                    <path d="M11 3l2 2" />
+                </svg>
+                Decorator
+            </a>
+            <a class="nav-item" href="moretools.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <rect x="2" y="2" width="5" height="5" rx="1" />
+                    <rect x="9" y="2" width="5" height="5" rx="1" />
+                    <rect x="2" y="9" width="5" height="5" rx="1" />
+                    <rect x="9" y="9" width="5" height="5" rx="1" />
+                </svg>
+                More Tools
+            </a>
+            <a class="nav-item" href="about.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="8" cy="8" r="6" />
+                    <path d="M8 7v5M8 5.5v.5" />
+                </svg>
+                About
+            </a>
+        </div>
+        <div class="nav-right">
+            <span class="nav-badge">Free · No Signup</span>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode">
+                <div class="toggle-track"><span>☀️</span><span>🌙</span></div>
+                <div class="toggle-thumb" id="toggleThumb">☀️</div>
+            </button>
+            <button class="hamburger" onclick="toggleDrawer()" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-drawer" id="mobileDrawer">
+        <a class="mob-item" href="index.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+            </svg> Home</a>
+        <a class="mob-item" href="symbols.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 5v3l2 2" />
+            </svg> Symbols</a>
+        <a class="mob-item" href="qrcode.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="5" height="5" rx="1" />
+                <rect x="9" y="2" width="5" height="5" rx="1" />
+                <rect x="2" y="9" width="5" height="5" rx="1" />
+                <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+            </svg> QR Code</a>
+        <a class="mob-item" href="decorator.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+                <path d="M11 3l2 2" />
+            </svg> Decorator</a>
+        <a class="mob-item" href="moretools.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <rect x="2" y="2" width="5" height="5" rx="1" />
+                <rect x="9" y="2" width="5" height="5" rx="1" />
+                <rect x="2" y="9" width="5" height="5" rx="1" />
+                <rect x="9" y="9" width="5" height="5" rx="1" />
+            </svg> More Tools</a>
+        <!-- <a class="mob-item" href="blog.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="12" height="12" rx="2" />
+                <path d="M5 6h6M5 9h4" />
+            </svg> Blog</a> -->
+        <a class="mob-item" href="about.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 7v5M8 5.5v.5" />
+            </svg> About</a>
+    </div>
+
+    <section class="page-hero">
+        <div class="hero-pill">
+            <span class="hero-pill-dot">✉</span>
+            We reply within 24-48 hours
+        </div>
+        <h1>Get in <em>Touch</em><br>With Us</h1>
+        <p>Have a question, suggestion, or bug to report? Reach out directly via email or connect with us on social
+            media.</p>
+    </section>
+
+    <div class="contact-wrapper">
+        <div class="contact-cards">
+
+            <div class="contact-card">
+                <div class="cc-icon">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round">
+                        <rect x="2" y="4" width="12" height="9" rx="1.5" />
+                        <path d="M2 5l6 5 6-5" />
+                    </svg>
+                </div>
+                <div class="cc-label">General Queries</div>
+                <div class="cc-val"><a href="mailto:textaura24@gmail.com">textaura24@gmail.com</a></div>
+                <div class="cc-desc">Questions, suggestions & feedback</div>
+            </div>
+
+            <div class="contact-card">
+                <div class="cc-icon">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round">
+                        <path d="M8 2a5 5 0 0 0-4.9 6L2 14l6-1.1A5 5 0 1 0 8 2z" />
+                    </svg>
+                </div>
+                <div class="cc-label">Privacy & Legal</div>
+                <div class="cc-val"><a href="mailto:textaura24@gmail.com">textaura24@gmail.com</a></div>
+                <div class="cc-desc">Data, privacy & legal concerns</div>
+            </div>
+
+            <div class="contact-card">
+                <div class="cc-icon">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round">
+                        <circle cx="8" cy="8" r="6" />
+                        <path d="M8 5v3.5l2.5 1.5" />
+                    </svg>
+                </div>
+                <div class="cc-label">Response Time</div>
+                <div class="cc-val">24 - 48 hrs</div>
+                <div class="cc-desc">Mon - Sat · 10am-7pm IST</div>
+            </div>
+
+        </div>
+
+        <div class="email-cta">
+            <div class="email-cta-info">
+                <strong>Send us an email directly</strong>
+                <p>Click the button to open your email app with our address pre-filled. No forms, no fuss.</p>
+                <div class="resp-badge">
+                    <span class="resp-dot"></span>
+                    Usually replies within 24-48 hours
+                </div>
+            </div>
+            <a class="mailto-btn" href="mailto:textaura24@gmail.com?subject=Textaura - Query">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="12" height="9" rx="1.5" />
+                    <path d="M2 5l6 5 6-5" />
+                </svg>
+                Email Us Now
+            </a>
+        </div>
+
+        <div class="section-label">Find Us On Social Media</div>
+        <div class="social-grid">
+
+            <!-- <a class="social-card" href="https://twitter.com/textaura" target="_blank" rel="noopener">
+                <div class="sc-icon" style="background:#EAF4FD">
+                    <svg viewBox="0 0 16 16" fill="#1DA1F2" width="22" height="22">
+                        <path
+                            d="M12.6 1H15l-4.9 5.6L16 15h-4.5l-3.1-4-3.5 4H2.4l5.2-5.9L1 1h4.6l2.8 3.6L12.6 1zM11.9 13.5h1.3L4.3 2.3H2.9l9 11.2z" />
+                    </svg>
+                </div>
+                <div class="sc-name">Twitter / X</div>
+                <div class="sc-handle">@textaura</div>
+            </a> -->
+
+            <a class="social-card" href="https://instagram.com/textaura.org_" target="_blank" rel="noopener">
+                <div class="sc-icon" style="background:#FFF0F8">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="#E1306C" stroke-width="1.6" stroke-linecap="round"
+                        width="22" height="22">
+                        <rect x="2" y="2" width="12" height="12" rx="3" />
+                        <circle cx="8" cy="8" r="3" />
+                        <circle cx="11.5" cy="4.5" r=".5" fill="#E1306C" stroke="none" />
+                    </svg>
+                </div>
+                <div class="sc-name">Instagram</div>
+                <div class="sc-handle">@textaura.org_</div>
+            </a>
+
+            <!-- <a class="social-card" href="https://youtube.com/@textaura" target="_blank" rel="noopener">
+                <div class="sc-icon" style="background:#FFF0F0">
+                    <svg viewBox="0 0 16 16" fill="#FF0000" width="22" height="22">
+                        <path
+                            d="M14.5 4.5s-.2-1.2-.7-1.7c-.7-.7-1.4-.7-1.8-.8C10.5 2 8 2 8 2s-2.5 0-4 .1c-.4 0-1.1.1-1.8.8-.5.5-.7 1.7-.7 1.7S1.3 5.9 1.3 7.3v1.3c0 1.4.2 2.8.2 2.8s.2 1.2.7 1.7c.7.7 1.6.7 2 .8C5.5 14 8 14 8 14s2.5 0 4-.2c.4 0 1.1-.1 1.8-.8.5-.5.7-1.7.7-1.7s.2-1.4.2-2.8V7.3c0-1.4-.2-2.8-.2-2.8zM6.5 10V5.5l4.5 2.3L6.5 10z" />
+                    </svg>
+                </div>
+                <div class="sc-name">YouTube</div>
+                <div class="sc-handle">@textaura</div>
+            </a> -->
+
+            <!-- <a class="social-card" href="https://pinterest.com/textaura" target="_blank" rel="noopener">
+                <div class="sc-icon" style="background:#FFF0F0">
+                    <svg viewBox="0 0 16 16" fill="#E60023" width="22" height="22">
+                        <path
+                            d="M8 1C4.1 1 1 4.1 1 8c0 2.9 1.8 5.5 4.4 6.6-.1-.5-.1-1.4 0-2 .2-.7 1.2-5.2 1.2-5.2s-.3-.6-.3-1.5c0-1.4.8-2.5 1.9-2.5.9 0 1.3.7 1.3 1.5 0 .9-.6 2.2-.9 3.4-.2.9.4 1.8 1.4 1.8 1.7 0 2.9-1.8 2.9-4.4 0-2.3-1.7-3.9-4-3.9-2.7 0-4.3 2-4.3 4.1 0 .8.3 1.7.7 2.1.1.1.1.2.1.3l-.3 1c0 .2-.2.2-.3.1C3.6 10.3 3 9.2 3 8c0-3 2.2-5.9 6.5-5.9 3.4 0 6 2.4 6 5.6 0 3.4-2.1 6.1-5 6.1-1 0-1.9-.5-2.2-1.1l-.6 2.2c-.2.8-.8 1.8-1.2 2.4.9.3 1.8.4 2.7.4 3.9 0 7-3.1 7-7S11.9 1 8 1z" />
+                    </svg>
+                </div>
+                <div class="sc-name">Pinterest</div>
+                <div class="sc-handle">@textaura</div>
+            </a> -->
+
+        </div>
+
+        <div class="section-label">Frequently Asked Questions</div>
+        <div class="faq-list">
+
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                    How long does it take to get a reply?
+                    <span class="arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round">
+                            <path d="M2 3.5l3 3 3-3" />
+                        </svg></span>
+                </div>
+                <div class="faq-a">We usually reply within 24-48 hours on working days (Monday to Saturday). Emails sent
+                    on Sunday may take slightly longer. We try our best to respond to every message.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                    How can I suggest a new tool?
+                    <span class="arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round">
+                            <path d="M2 3.5l3 3 3-3" />
+                        </svg></span>
+                </div>
+                <div class="faq-a">Email us at textaura24@gmail.com with the subject "Tool Suggestion" and describe the
+                    tool you'd like. We consider all suggestions seriously and add popular ones to our roadmap.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                    How do I report a bug?
+                    <span class="arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round">
+                            <path d="M2 3.5l3 3 3-3" />
+                        </svg></span>
+                </div>
+                <div class="faq-a">Email us at textaura24@gmail.com with the subject "Bug Report". Please mention which
+                    tool/page had the issue, what happened, and your browser and device. We'll fix it as soon as
+                    possible.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                    Do you accept partnerships or collaborations?
+                    <span class="arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round">
+                            <path d="M2 3.5l3 3 3-3" />
+                        </svg></span>
+                </div>
+                <div class="faq-a">Yes! We're open to tool collaborations, content partnerships, and co-marketing
+                    opportunities. Email us at textaura24@gmail.com with "Partnership" in the subject line.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                    Is Textaura free? Will it stay free?
+                    <span class="arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round">
+                            <path d="M2 3.5l3 3 3-3" />
+                        </svg></span>
+                </div>
+                <div class="faq-a">Yes, Textaura is completely free and will always remain free. No subscriptions, no
+                    hidden fees, no account required. That's our commitment.</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <strong>Textaura</strong>
+                Free Online Text Tools Suite
+            </div>
+            <div class="footer-links">
+                <a class="footer-link" href="index.html">Home</a>
+                <a class="footer-link" href="symbols.html">Symbols</a>
+                <a class="footer-link" href="qrcode.html">QR Code</a>
+                <a class="footer-link" href="decorator.html">Decorator</a>
+                <a class="footer-link" href="moretools.html">More Tools</a>
+                <!-- <a class="footer-link" href="blog.html">Blog</a> -->
+                <a class="footer-link" href="about.html">About</a>
+                <a class="footer-link" href="contact.html">Contact</a>
+                <a class="footer-link" href="policy.html">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 textaura.org · All rights reserved</span>
+            <span>Free Text Tools · No Signup · Built with ♥ in India</span>
+        </div>
+    </footer>
+    <script>
+        function toggleFaq(el) {
+            const item = el.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        }
+    </script>
+    <script src="scripts/tog-ham.js"></script>
+</body>
+
+</html>
