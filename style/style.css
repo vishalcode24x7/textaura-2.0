@@ -798,6 +798,139 @@ html.dark .toggle-thumb {
     transform: translateX(-50%) translateY(0);
 }
 
+.faq-section {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 3rem
+}
+
+.faq-heading {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--ink);
+    letter-spacing: -.3px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.faq-heading::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: var(--border);
+    border-radius: 2px
+}
+
+.faq-box {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border)
+}
+
+.faq-item:last-child {
+    border-bottom: none
+}
+
+.faq-q {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 15px 18px;
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--ink);
+    cursor: pointer;
+    user-select: none;
+    transition: background .12s;
+    line-height: 1.4
+}
+
+.faq-q:hover {
+    background: var(--bg)
+}
+
+.faq-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all .2s
+}
+
+.faq-icon svg {
+    width: 11px;
+    height: 11px;
+    color: var(--muted);
+    transition: transform .2s
+}
+
+.faq-item.open .faq-q {
+    color: var(--primary)
+}
+
+.faq-item.open .faq-icon {
+    background: var(--primary-light);
+    border-color: var(--primary)
+}
+
+.faq-item.open .faq-icon svg {
+    color: var(--primary);
+    transform: rotate(180deg)
+}
+
+.faq-a {
+    font-size: .875rem;
+    color: var(--ink2);
+    line-height: 1.85;
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease, padding .3s ease
+}
+
+.faq-item.open .faq-a {
+    max-height: 300px;
+    padding: 0 18px 15px
+}
+
+/* Page labels (for this reference file only) */
+.page-sep {
+    background: var(--primary);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    margin: 2rem 0 1rem;
+    border-radius: 8px;
+    display: inline-block
+}
+
+.copy-note {
+    background: var(--bg);
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 11.5px;
+    color: var(--muted);
+    margin-bottom: .8rem;
+    font-family: 'Fira Code', monospace
+}
+
 @keyframes fadeUp {
     from {
         opacity: 0;

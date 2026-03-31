@@ -34,3 +34,13 @@ function showToast(msg) {
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => t.classList.remove('show'), 1800);
 }
+
+document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+        const item = q.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        item.closest('.faq-box').querySelectorAll('.faq-item')
+            .forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+    });
+});
