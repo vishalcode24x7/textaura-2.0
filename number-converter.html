@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number System Converter — Textaura | Binary, Decimal, Hex, Octal</title>
+  <meta name="description"
+    content="Free online number system converter. Convert between Binary, Decimal, Hexadecimal, Octal, BCD, Gray Code instantly. Also convert ASCII text to binary and vice versa. No signup needed.">
+  <meta name="keywords"
+    content="binary to decimal, decimal to binary, binary to hex, hexadecimal converter, octal converter, number system converter, binary converter, BCD converter, gray code converter, ASCII to binary, number base converter">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Textaura">
+  <meta name="theme-color" content="#5B4FE9">
+  <link rel="canonical" href="https://textaura.org/number-converter">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://textaura.org/number-converter">
+  <meta property="og:title" content="Number System Converter — Textaura | Binary, Decimal, Hex, Octal">
+  <meta property="og:description"
+    content="Convert between Binary, Decimal, Hex, Octal, BCD, Gray Code and ASCII. Free, instant, no signup.">
+  <meta property="og:site_name" content="Textaura">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Textaura Number System Converter",
+  "url":"https://textaura.org/number-converter",
+  "description":"Free online number system converter. Convert between Binary, Decimal, Hexadecimal, Octal, BCD, Gray Code and ASCII.",
+  "applicationCategory":"EducationApplication",
+  "operatingSystem":"Any",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "featureList":["Binary to Decimal","Decimal to Binary","Hexadecimal Converter","Octal Converter","BCD Converter","Gray Code Converter","ASCII to Binary","Text to Binary"]
+}
+</script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/number-converter.css">
+</head>
+
+<body>
+
+  <nav>
+    <span class="nav-logo">Textaura</span>
+    <div class="nav-menu">
+      <a class="nav-item" href="index.html">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+        </svg>
+        Home
+      </a>
+
+      <a class="nav-item" href="symbols.html">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <circle cx="8" cy="8" r="6" />
+          <path d="M8 5v3l2 2" />
+        </svg>
+        Symbols
+      </a>
+
+      <a class="nav-item" href="qrcode.html">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+          stroke-linejoin="round">
+          <rect x="2" y="2" width="5" height="5" rx="1" />
+          <rect x="9" y="2" width="5" height="5" rx="1" />
+          <rect x="2" y="9" width="5" height="5" rx="1" />
+          <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+        </svg>
+        QR Code
+      </a>
+
+      <a class="nav-item" href="decorator.html">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+          <path d="M11 3l2 2" />
+        </svg>
+        Decorator
+      </a>
+
+      <a class="nav-item active-page" href="moretools.html">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <rect x="2" y="2" width="5" height="5" rx="1" />
+          <rect x="9" y="2" width="5" height="5" rx="1" />
+          <rect x="2" y="9" width="5" height="5" rx="1" />
+          <rect x="9" y="9" width="5" height="5" rx="1" />
+        </svg>
+        More Tools
+      </a>
+
+      <a class="nav-item" href="about.html">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <circle cx="8" cy="8" r="6" />
+          <path d="M8 7v5M8 5.5v.5" />
+        </svg>
+        About
+      </a>
+    </div>
+    <div class="nav-right">
+      <span class="nav-badge">6 Number Systems</span>
+      <button class="theme-toggle" onclick="toggleTheme()">
+        <div class="toggle-track"><span>☀️</span><span>🌙</span></div>
+        <div class="toggle-thumb" id="toggleThumb">☀️</div>
+      </button>
+      <button class="hamburger" onclick="toggleDrawer()"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a class="mob-item" href="index.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+        stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+      </svg> Home</a>
+    <a class="mob-item" href="symbols.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+        stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <circle cx="8" cy="8" r="6" />
+        <path d="M8 5v3l2 2" />
+      </svg> Symbols</a>
+    <a class="mob-item" href="qrcode.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="5" height="5" rx="1" />
+        <rect x="9" y="2" width="5" height="5" rx="1" />
+        <rect x="2" y="9" width="5" height="5" rx="1" />
+        <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+      </svg> QR Code</a>
+    <a class="mob-item" href="decorator.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+        stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+        <path d="M11 3l2 2" />
+      </svg> Decorator</a>
+    <a class="mob-item" href="moretools.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+        stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <rect x="2" y="2" width="5" height="5" rx="1" />
+        <rect x="9" y="2" width="5" height="5" rx="1" />
+        <rect x="2" y="9" width="5" height="5" rx="1" />
+        <rect x="9" y="9" width="5" height="5" rx="1" />
+      </svg> More Tools</a>
+    <a class="mob-item" href="about.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+        stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <circle cx="8" cy="8" r="6" />
+        <path d="M8 7v5M8 5.5v.5" />
+      </svg> About</a>
+  </div>
+
+  <section class="page-hero">
+    <div class="hero-pill"><span class="hero-pill-dot">01</span>Binary · Decimal · Hex · Octal · BCD · Gray Code</div>
+    <h1>Number System <em>Converter</em></h1>
+    <p>Convert between Binary, Decimal, Hexadecimal, Octal, BCD, and Gray Code instantly. Also convert ASCII text to
+      binary and back.</p>
+  </section>
+
+  <div class="tool-wrapper">
+
+    <!-- TABS -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('decimal')">Decimal</button>
+      <button class="tab-btn" onclick="switchTab('binary')">Binary</button>
+      <button class="tab-btn" onclick="switchTab('hex')">Hexadecimal</button>
+      <button class="tab-btn" onclick="switchTab('octal')">Octal</button>
+      <button class="tab-btn" onclick="switchTab('ascii')">Text ↔ Binary</button>
+      <button class="tab-btn" onclick="switchTab('reference')">Reference</button>
+    </div>
+
+    <!-- ══ DECIMAL INPUT ══ -->
+    <div class="conv-section active" id="sec-decimal">
+      <div class="card">
+        <div class="card-title"><span class="base-badge">Base 10</span> Enter Decimal Number</div>
+        <input type="number" class="num-input" id="decInput" placeholder="e.g. 255" oninput="convertFrom('dec')"
+          min="0">
+        <div class="err-msg" id="decErr">Please enter a valid decimal number (0-9).</div>
+      </div>
+      <div class="results-grid" id="decResults"></div>
+      <div class="steps-card" id="decSteps" style="display:none">
+        <div class="steps-head" onclick="this.nextElementSibling.classList.toggle('open')">
+          📖 Step-by-step conversion
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M2 3.5l3 3 3-3" />
+          </svg>
+        </div>
+        <div class="steps-body" id="decStepsBody"></div>
+      </div>
+    </div>
+
+    <!-- ══ BINARY INPUT ══ -->
+    <div class="conv-section" id="sec-binary">
+      <div class="card">
+        <div class="card-title"><span class="base-badge">Base 2</span> Enter Binary Number</div>
+        <input type="text" class="num-input" id="binInput" placeholder="e.g. 11111111" oninput="convertFrom('bin')"
+          inputmode="numeric">
+        <div class="err-msg" id="binErr">Please enter a valid binary number (0s and 1s only).</div>
+      </div>
+      <div class="results-grid" id="binResults"></div>
+      <div class="steps-card" id="binSteps" style="display:none">
+        <div class="steps-head" onclick="this.nextElementSibling.classList.toggle('open')">
+          📖 Step-by-step conversion
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M2 3.5l3 3 3-3" />
+          </svg>
+        </div>
+        <div class="steps-body" id="binStepsBody"></div>
+      </div>
+    </div>
+
+    <!-- ══ HEX INPUT ══ -->
+    <div class="conv-section" id="sec-hex">
+      <div class="card">
+        <div class="card-title"><span class="base-badge">Base 16</span> Enter Hexadecimal Number</div>
+        <input type="text" class="num-input" id="hexInput" placeholder="e.g. FF or ff" oninput="convertFrom('hex')"
+          style="text-transform:uppercase">
+        <div class="err-msg" id="hexErr">Please enter a valid hex number (0-9, A-F).</div>
+      </div>
+      <div class="results-grid" id="hexResults"></div>
+    </div>
+
+    <!-- ══ OCTAL INPUT ══ -->
+    <div class="conv-section" id="sec-octal">
+      <div class="card">
+        <div class="card-title"><span class="base-badge">Base 8</span> Enter Octal Number</div>
+        <input type="text" class="num-input" id="octInput" placeholder="e.g. 377" oninput="convertFrom('oct')"
+          inputmode="numeric">
+        <div class="err-msg" id="octErr">Please enter a valid octal number (0-7 only).</div>
+      </div>
+      <div class="results-grid" id="octResults"></div>
+    </div>
+
+    <!-- ══ ASCII / TEXT ══ -->
+    <div class="conv-section" id="sec-ascii">
+      <div class="ascii-grid">
+        <div class="card" style="margin-bottom:0">
+          <div class="card-title">📝 Text / ASCII → Binary</div>
+          <textarea class="ascii-input" id="textInput" placeholder="Type any text…" oninput="textToBinary()"></textarea>
+          <div style="display:flex;justify-content:flex-end;margin-top:8px">
+            <button class="copy-btn" onclick="copyAscii('binOutput')">Copy Binary</button>
+          </div>
+        </div>
+        <div class="card" style="margin-bottom:0">
+          <div class="card-title">🔢 Binary → Text / ASCII</div>
+          <textarea class="ascii-input" id="binTextInput"
+            placeholder="Enter binary (space separated)&#10;e.g. 01001000 01101001" oninput="binaryToText()"></textarea>
+          <div style="display:flex;justify-content:flex-end;margin-top:8px">
+            <button class="copy-btn" onclick="copyAscii('textOutput')">Copy Text</button>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+        <div class="card" style="margin-bottom:0">
+          <div class="card-title">Binary Output</div>
+          <div class="rb-val" id="binOutput"
+            style="font-size:12px;line-height:1.8;color:var(--primary);min-height:60px">—</div>
+        </div>
+        <div class="card" style="margin-bottom:0">
+          <div class="card-title">Text Output</div>
+          <div class="rb-val" id="textOutput" style="font-size:1rem;min-height:60px">—</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ REFERENCE ══ -->
+    <div class="conv-section" id="sec-reference">
+      <div class="card" style="padding:0;overflow:hidden">
+        <div style="padding:16px 18px;border-bottom:1px solid var(--border)">
+          <span
+            style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Number
+            Systems — Conversion Table (0-15)</span>
+        </div>
+        <div style="overflow-x:auto">
+          <table class="ref-table">
+            <thead>
+              <tr>
+                <th>Decimal</th>
+                <th>Binary</th>
+                <th>Octal</th>
+                <th>Hex</th>
+                <th>BCD</th>
+                <th>Gray Code</th>
+              </tr>
+            </thead>
+            <tbody id="refBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="sec-hd" style="margin-top:2rem">Frequently Asked Questions</div>
+    <div class="faq-box">
+      <div class="faq-item">
+        <div class="faq-q">How do I convert binary to decimal?<span class="faq-icon"><svg viewBox="0 0 10 10"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M2 3.5l3 3 3-3" />
+            </svg></span></div>
+        <div class="faq-a">To convert binary to decimal, multiply each binary digit by 2 raised to the power of its
+          position (from right, starting at 0), then sum all values. Example: 1010 = 1×2³ + 0×2² + 1×2¹ + 0×2⁰ = 8+0+2+0
+          = 10. Use the step-by-step button to see this for any number.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is hexadecimal (hex)?<span class="faq-icon"><svg viewBox="0 0 10 10" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M2 3.5l3 3 3-3" />
+            </svg></span></div>
+        <div class="faq-a">Hexadecimal is a base-16 number system using digits 0-9 and letters A-F. It is widely used in
+          computer science, web colors (#FF5733), memory addresses, and color codes. One hex digit represents exactly 4
+          binary bits.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is Gray Code?<span class="faq-icon"><svg viewBox="0 0 10 10" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M2 3.5l3 3 3-3" />
+            </svg></span></div>
+        <div class="faq-a">Gray Code (also called reflected binary code) is a binary sequence where only one bit changes
+          between consecutive values. It is used in digital circuits, rotary encoders, and error correction to prevent
+          glitches during transitions.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is BCD (Binary Coded Decimal)?<span class="faq-icon"><svg viewBox="0 0 10 10"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M2 3.5l3 3 3-3" />
+            </svg></span></div>
+        <div class="faq-a">BCD represents each decimal digit with its 4-bit binary equivalent. For example, decimal 25
+          in BCD is 0010 0101 (2=0010, 5=0101). It is used in digital clocks, calculators, and financial systems where
+          decimal accuracy is critical.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do I convert text to binary?<span class="faq-icon"><svg viewBox="0 0 10 10" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M2 3.5l3 3 3-3" />
+            </svg></span></div>
+        <div class="faq-a">Each character has an ASCII value (e.g., 'A' = 65, 'a' = 97). To convert to binary, find the
+          ASCII value of each character and convert it to 8-bit binary. Use the "Text ↔ Binary" tab above to convert any
+          text to binary and back.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is the difference between Octal and Binary?<span class="faq-icon"><svg
+              viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M2 3.5l3 3 3-3" />
+            </svg></span></div>
+        <div class="faq-a">Binary (Base 2) uses only 0 and 1. Octal (Base 8) uses digits 0-7. One octal digit represents
+          exactly 3 binary bits. Octal was historically used in older computer systems and Unix file permissions (e.g.,
+          chmod 755).</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>Textaura</strong>
+        Free Online Text Tools Suite
+      </div>
+      <div class="footer-links">
+        <a class="footer-link" href="index.html">Home</a>
+        <a class="footer-link" href="symbols.html">Symbols</a>
+        <a class="footer-link" href="qrcode.html">QR Code</a>
+        <a class="footer-link" href="decorator.html">Decorator</a>
+        <a class="footer-link" href="moretools.html">More Tools</a>
+        <a class="footer-link" href="about.html">About</a>
+        <a class="footer-link" href="contact.html">Contact</a>
+        <a class="footer-link" href="policy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 textaura.com · All rights reserved</span>
+      <span>Bold · Italic · Gothic · Script · Bubble · QR Code · Symbols · Decorator</span>
+    </div>
+  </footer>
+  <div class="toast" id="toast"><span class="toast-dot"></span><span id="toastMsg">Copied!</span></div>
+  <script src="scripts/number-converter.js"></script>
+  <script src="scripts/tog-ham.js"></script>
+</body>
+
+</html>

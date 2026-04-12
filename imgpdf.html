@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Format Converter — Textaura | PDF & Image Converter Free Online</title>
+    <meta name="description"
+        content="Free online file format converter. Convert images between JPG, PNG, WebP, BMP, GIF formats. Convert PDF to Image and Image to PDF. No upload to server, 100% private. No signup needed.">
+    <meta name="keywords"
+        content="file format converter, image converter, jpg to png, png to jpg, jpg to webp, webp to jpg, pdf to image, image to pdf, convert image format online, free image converter, pdf converter online">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="author" content="Textaura">
+    <meta name="theme-color" content="#5B4FE9">
+    <link rel="canonical" href="https://textaura.org/file-converter">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://textaura.org/file-converter">
+    <meta property="og:title" content="File Format Converter — Textaura | PDF & Image Converter">
+    <meta property="og:description"
+        content="Convert images between JPG, PNG, WebP, BMP. PDF to Image and Image to PDF. Free, private, no signup.">
+    <meta property="og:site_name" content="Textaura">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="File Format Converter — Textaura | Free PDF & Image Tool">
+    <meta name="twitter:description" content="Convert JPG, PNG, WebP, PDF formats. Free, browser-based, 100% private.">
+
+    <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebApplication",
+      "name":"Textaura File Format Converter",
+      "url":"https://textaura.org/file-converter",
+      "description":"Free online file format converter for images (JPG, PNG, WebP, BMP, GIF) and PDFs. Runs entirely in the browser — no uploads.",
+      "applicationCategory":"MultimediaApplication",
+      "operatingSystem":"Any",
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+      "featureList":["JPG to PNG","PNG to JPG","WebP Converter","PDF to Image","Image to PDF","BMP Converter","GIF Support","Batch Convert","Quality Control","Resize Image"]
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Is this file converter free?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free. No signup, no subscription, no limits."}},
+        {"@type":"Question","name":"Are my files uploaded to a server?","acceptedAnswer":{"@type":"Answer","text":"No. All conversions happen entirely in your browser using JavaScript. Your files never leave your device."}},
+        {"@type":"Question","name":"Which image formats are supported?","acceptedAnswer":{"@type":"Answer","text":"JPG/JPEG, PNG, WebP, BMP, GIF, and AVIF formats are supported for image conversion."}}
+      ]
+    }
+  ]
+}
+</script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/imgpdf.css">
+</head>
+
+<body>
+
+    <nav>
+        <span class="nav-logo">Textaura</span>
+        <div class="nav-menu">
+            <a class="nav-item" href="index.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+                </svg>
+                Home
+            </a>
+
+            <a class="nav-item" href="symbols.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="8" cy="8" r="6" />
+                    <path d="M8 5v3l2 2" />
+                </svg>
+                Symbols
+            </a>
+
+            <a class="nav-item" href="qrcode.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="2" y="2" width="5" height="5" rx="1" />
+                    <rect x="9" y="2" width="5" height="5" rx="1" />
+                    <rect x="2" y="9" width="5" height="5" rx="1" />
+                    <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+                </svg>
+                QR Code
+            </a>
+
+            <a class="nav-item" href="decorator.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+                    <path d="M11 3l2 2" />
+                </svg>
+                Decorator
+            </a>
+
+            <a class="nav-item active-page" href="moretools.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <rect x="2" y="2" width="5" height="5" rx="1" />
+                    <rect x="9" y="2" width="5" height="5" rx="1" />
+                    <rect x="2" y="9" width="5" height="5" rx="1" />
+                    <rect x="9" y="9" width="5" height="5" rx="1" />
+                </svg>
+                More Tools
+            </a>
+
+            <a class="nav-item" href="about.html">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="8" cy="8" r="6" />
+                    <path d="M8 7v5M8 5.5v.5" />
+                </svg>
+                About
+            </a>
+        </div>
+        <div class="nav-right">
+            <span class="nav-badge">Free · Private · Fast</span>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <div class="toggle-track"><span>☀️</span><span>🌙</span></div>
+                <div class="toggle-thumb" id="toggleThumb">☀️</div>
+            </button>
+            <button class="hamburger" onclick="toggleDrawer()"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-drawer" id="mobileDrawer">
+        <a class="mob-item" href="index.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+            </svg> Home</a>
+        <a class="mob-item" href="symbols.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 5v3l2 2" />
+            </svg> Symbols</a>
+        <a class="mob-item" href="qrcode.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="5" height="5" rx="1" />
+                <rect x="9" y="2" width="5" height="5" rx="1" />
+                <rect x="2" y="9" width="5" height="5" rx="1" />
+                <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+            </svg> QR Code</a>
+        <a class="mob-item" href="decorator.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+                <path d="M11 3l2 2" />
+            </svg> Decorator</a>
+        <a class="mob-item" href="moretools.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <rect x="2" y="2" width="5" height="5" rx="1" />
+                <rect x="9" y="2" width="5" height="5" rx="1" />
+                <rect x="2" y="9" width="5" height="5" rx="1" />
+                <rect x="9" y="9" width="5" height="5" rx="1" />
+            </svg> More Tools</a>
+        <a class="mob-item" href="about.html" onclick="toggleDrawer()"><svg viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="8" cy="8" r="6" />
+                <path d="M8 7v5M8 5.5v.5" />
+            </svg> About</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <div class="hero-pill"><span class="hero-pill-dot">🔄</span>JPG · PNG · WebP · PDF · BMP · GIF · Free</div>
+        <h1>PDF & Image <em>Format Converter</em></h1>
+        <p>Convert images between JPG, PNG, WebP, BMP, GIF formats. Convert PDF to images and images to PDF — all free,
+            all private, no uploads.</p>
+    </section>
+
+    <div class="tool-wrapper">
+
+        <!-- NOTICE -->
+        <div class="notice">
+            <span style="font-size:18px;flex-shrink:0">🔒</span>
+            <p><strong>100% Private:</strong> Your files are <strong>never uploaded</strong> to any server. All
+                conversions happen entirely inside your browser. No data leaves your device.</p>
+        </div>
+
+        <!-- TABS -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('image')">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <rect x="2" y="3" width="12" height="10" rx="2" />
+                    <circle cx="6" cy="7" r="1.2" />
+                    <path d="M2 11l3-3 2.5 2.5L10 8l4 4" />
+                </svg>
+                Image Converter
+            </button>
+            <button class="tab-btn" onclick="switchTab('pdf2img')">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M9 2H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V6z" />
+                    <path d="M9 2v4h4" />
+                    <path d="M6 10l2 2 2-2" />
+                </svg>
+                PDF → Image
+            </button>
+            <button class="tab-btn" onclick="switchTab('img2pdf')">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M9 2H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V6z" />
+                    <path d="M9 2v4h4" />
+                    <path d="M6 9l2-2 2 2" />
+                </svg>
+                Image → PDF
+            </button>
+            <button class="tab-btn" onclick="switchTab('resize')">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="2" y="2" width="8" height="8" rx="1" />
+                    <path d="M10 6h4v8H6v-4" />
+                </svg>
+                Resize Image
+            </button>
+        </div>
+
+        <!-- ══ IMAGE CONVERTER ══ -->
+        <div class="conv-section active" id="sec-image">
+            <div class="card">
+                <div class="card-title">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round">
+                        <rect x="2" y="3" width="12" height="10" rx="2" />
+                        <circle cx="6" cy="7" r="1.2" />
+                        <path d="M2 11l3-3 2.5 2.5L10 8l4 4" />
+                    </svg>
+                    Upload Images (Multiple allowed)
+                </div>
+                <div class="drop-zone" id="imgDropZone">
+                    <input type="file" id="imgInput" accept="image/*" multiple onchange="handleImageFiles(this.files)">
+                    <span class="dz-icon">🖼️</span>
+                    <div class="dz-title">Drop images here or click to browse</div>
+                    <div class="dz-sub">Supports multiple files at once<br>Max 20MB per file</div>
+                    <div class="dz-formats">
+                        <span class="dz-fmt">JPG</span><span class="dz-fmt">PNG</span><span class="dz-fmt">WebP</span>
+                        <span class="dz-fmt">BMP</span><span class="dz-fmt">GIF</span><span class="dz-fmt">AVIF</span>
+                    </div>
+                </div>
+                <div class="preview-grid" id="imgPreviewGrid"></div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">⚙️ Conversion Settings</div>
+                <div class="settings-row">
+                    <label>Convert to:</label>
+                    <select class="setting-select" id="imgOutputFormat">
+                        <option value="image/jpeg">JPG / JPEG</option>
+                        <option value="image/png">PNG</option>
+                        <option value="image/webp">WebP</option>
+                        <option value="image/bmp">BMP</option>
+                        <option value="image/gif">GIF</option>
+                    </select>
+                    <label>Quality:</label>
+                    <input type="range" class="quality-range" id="imgQuality" min="10" max="100" value="92"
+                        oninput="document.getElementById('imgQualVal').textContent=this.value+'%'">
+                    <span class="quality-val" id="imgQualVal">92%</span>
+                </div>
+                <button class="convert-btn" id="imgConvertBtn" onclick="convertImages()" disabled>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M1 8a7 7 0 1 0 14 0" />
+                        <path d="M12 4l3 3-3 3" />
+                    </svg>
+                    Convert Images
+                </button>
+                <div class="progress-wrap" id="imgProgress">
+                    <div class="progress-fill" id="imgProgressFill"></div>
+                </div>
+            </div>
+
+            <div class="result-card" id="imgResultCard">
+                <div class="result-head">
+                    <span class="result-title">✅ Converted Files</span>
+                    <button class="dl-all-btn" onclick="downloadAllImages()">
+                        <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 2v9M5 8l3 3 3-3" />
+                            <path d="M3 14h10" />
+                        </svg>
+                        Download All
+                    </button>
+                </div>
+                <div id="imgResultList"></div>
+            </div>
+        </div>
+
+        <!-- ══ PDF TO IMAGE ══ -->
+        <div class="conv-section" id="sec-pdf2img">
+            <div class="card">
+                <div class="card-title">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 2H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V6z" />
+                        <path d="M9 2v4h4" />
+                    </svg>
+                    Upload PDF File
+                </div>
+                <div class="drop-zone" id="pdfDropZone">
+                    <input type="file" id="pdfInput" accept=".pdf" onchange="handlePDFFile(this.files[0])">
+                    <span class="dz-icon">📄</span>
+                    <div class="dz-title">Drop PDF here or click to browse</div>
+                    <div class="dz-sub">One PDF at a time · All pages will be converted<br>Max 50MB</div>
+                    <div class="dz-formats"><span class="dz-fmt">PDF</span></div>
+                </div>
+                <div id="pdfFileInfo" style="display:none;margin-top:12px">
+                    <div class="result-item">
+                        <div class="preview-thumb-pdf">📄</div>
+                        <div class="result-info">
+                            <div class="result-name" id="pdfFileName">file.pdf</div>
+                            <div class="result-meta" id="pdfFileMeta">Loading…</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">⚙️ Settings</div>
+                <div class="settings-row">
+                    <label>Output format:</label>
+                    <select class="setting-select" id="pdfOutputFmt">
+                        <option value="image/jpeg">JPG</option>
+                        <option value="image/png">PNG</option>
+                        <option value="image/webp">WebP</option>
+                    </select>
+                    <label>Quality:</label>
+                    <input type="range" class="quality-range" id="pdfQuality" min="50" max="300" value="150"
+                        oninput="document.getElementById('pdfQualVal').textContent=this.value+' DPI'">
+                    <span class="quality-val" id="pdfQualVal">150 DPI</span>
+                </div>
+                <button class="convert-btn" id="pdfConvertBtn" onclick="convertPDFToImages()" disabled>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M1 8a7 7 0 1 0 14 0" />
+                        <path d="M12 4l3 3-3 3" />
+                    </svg>
+                    Convert PDF to Images
+                </button>
+                <div class="progress-wrap" id="pdfProgress">
+                    <div class="progress-fill" id="pdfProgressFill"></div>
+                </div>
+            </div>
+
+            <div class="result-card" id="pdfResultCard">
+                <div class="result-head">
+                    <span class="result-title" id="pdfResultTitle">✅ Converted Pages</span>
+                    <button class="dl-all-btn" onclick="downloadAllPDFImages()">
+                        <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 2v9M5 8l3 3 3-3" />
+                            <path d="M3 14h10" />
+                        </svg>
+                        Download All
+                    </button>
+                </div>
+                <div id="pdfResultList"></div>
+            </div>
+        </div>
+
+        <!-- ══ IMAGE TO PDF ══ -->
+        <div class="conv-section" id="sec-img2pdf">
+            <div class="card">
+                <div class="card-title">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round">
+                        <rect x="2" y="3" width="12" height="10" rx="2" />
+                    </svg>
+                    Upload Images (Multiple = Multiple PDF pages)
+                </div>
+                <div class="drop-zone" id="i2pDropZone">
+                    <input type="file" id="i2pInput" accept="image/*" multiple onchange="handleI2PFiles(this.files)">
+                    <span class="dz-icon">🖼️</span>
+                    <div class="dz-title">Drop images here or click to browse</div>
+                    <div class="dz-sub">Each image becomes one PDF page<br>Drag to reorder after uploading</div>
+                    <div class="dz-formats"><span class="dz-fmt">JPG</span><span class="dz-fmt">PNG</span><span
+                            class="dz-fmt">WebP</span><span class="dz-fmt">BMP</span></div>
+                </div>
+                <div class="preview-grid" id="i2pPreviewGrid"></div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">⚙️ PDF Settings</div>
+                <div class="settings-row">
+                    <label>Page size:</label>
+                    <select class="setting-select" id="pdfPageSize">
+                        <option value="a4">A4 (210×297mm)</option>
+                        <option value="letter">Letter (8.5×11in)</option>
+                        <option value="a3">A3 (297×420mm)</option>
+                        <option value="fit">Fit to Image</option>
+                    </select>
+                    <label>Orientation:</label>
+                    <select class="setting-select" id="pdfOrientation">
+                        <option value="portrait">Portrait</option>
+                        <option value="landscape">Landscape</option>
+                    </select>
+                </div>
+                <button class="convert-btn" id="i2pConvertBtn" onclick="convertImagesToPDF()" disabled>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M1 8a7 7 0 1 0 14 0" />
+                        <path d="M12 4l3 3-3 3" />
+                    </svg>
+                    Create PDF
+                </button>
+                <div class="progress-wrap" id="i2pProgress">
+                    <div class="progress-fill" id="i2pProgressFill"></div>
+                </div>
+            </div>
+
+            <div class="result-card" id="i2pResultCard">
+                <div class="result-head"><span class="result-title">✅ PDF Created</span></div>
+                <div id="i2pResultItem"></div>
+            </div>
+        </div>
+
+        <!-- ══ RESIZE IMAGE ══ -->
+        <div class="conv-section" id="sec-resize">
+            <div class="card">
+                <div class="card-title">Upload Image to Resize</div>
+                <div class="drop-zone" id="resizeDropZone">
+                    <input type="file" id="resizeInput" accept="image/*" onchange="handleResizeFile(this.files[0])">
+                    <span class="dz-icon">📐</span>
+                    <div class="dz-title">Drop image here or click to browse</div>
+                    <div class="dz-sub">JPG, PNG, WebP, BMP supported</div>
+                </div>
+                <div id="resizeOrigInfo" style="display:none;margin-top:12px;font-size:12.5px;color:var(--muted)"></div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">⚙️ Resize Settings</div>
+                <div class="settings-row">
+                    <label>Width (px):</label>
+                    <input type="number" id="resizeW" placeholder="e.g. 1920" min="1" max="8000"
+                        style="border:1.5px solid var(--border);border-radius:9px;outline:none;font-family:'Fira Code',monospace;font-size:14px;color:var(--ink);padding:8px 12px;background:var(--bg);width:110px;transition:border-color .2s">
+                    <label>Height (px):</label>
+                    <input type="number" id="resizeH" placeholder="e.g. 1080" min="1" max="8000"
+                        style="border:1.5px solid var(--border);border-radius:9px;outline:none;font-family:'Fira Code',monospace;font-size:14px;color:var(--ink);padding:8px 12px;background:var(--bg);width:110px;transition:border-color .2s">
+                    <label><input type="checkbox" id="keepAspect" checked style="accent-color:var(--primary)"> Keep
+                        ratio</label>
+                </div>
+                <div class="settings-row">
+                    <label>Output format:</label>
+                    <select class="setting-select" id="resizeFormat">
+                        <option value="image/jpeg">JPG</option>
+                        <option value="image/png">PNG</option>
+                        <option value="image/webp">WebP</option>
+                    </select>
+                    <label>Quality:</label>
+                    <input type="range" class="quality-range" id="resizeQuality" min="10" max="100" value="90"
+                        oninput="document.getElementById('resizeQualVal').textContent=this.value+'%'">
+                    <span class="quality-val" id="resizeQualVal">90%</span>
+                </div>
+                <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
+                    <span style="font-size:11px;font-weight:700;color:var(--muted);align-self:center">Presets:</span>
+                    <button onclick="setResize(1920,1080)"
+                        style="background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:5px 12px;font-size:11.5px;font-weight:700;color:var(--ink2);cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all .15s"
+                        onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)'"
+                        onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--ink2)'">1920×1080</button>
+                    <button onclick="setResize(1280,720)"
+                        style="background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:5px 12px;font-size:11.5px;font-weight:700;color:var(--ink2);cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all .15s"
+                        onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)'"
+                        onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--ink2)'">1280×720</button>
+                    <button onclick="setResize(800,600)"
+                        style="background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:5px 12px;font-size:11.5px;font-weight:700;color:var(--ink2);cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all .15s"
+                        onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)'"
+                        onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--ink2)'">800×600</button>
+                    <button onclick="setResize(512,512)"
+                        style="background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:5px 12px;font-size:11.5px;font-weight:700;color:var(--ink2);cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all .15s"
+                        onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)'"
+                        onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--ink2)'">512×512</button>
+                    <button onclick="setResize(400,400)"
+                        style="background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:5px 12px;font-size:11.5px;font-weight:700;color:var(--ink2);cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all .15s"
+                        onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)'"
+                        onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--ink2)'">400×400</button>
+                </div>
+                <button class="convert-btn" id="resizeConvertBtn" onclick="resizeImage()" disabled>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M1 8a7 7 0 1 0 14 0" />
+                        <path d="M12 4l3 3-3 3" />
+                    </svg>
+                    Resize & Download
+                </button>
+            </div>
+
+            <div class="result-card" id="resizeResultCard">
+                <div class="result-head"><span class="result-title">✅ Resized Image</span></div>
+                <div id="resizeResultItem"></div>
+            </div>
+        </div>
+
+        <!-- FEATURES -->
+        <div class="sec-hd">Why Use Textaura File Converter</div>
+        <div class="features-grid">
+            <div class="feat-card">
+                <div class="feat-icon">🔒</div>
+                <div class="feat-title">100% Private</div>
+                <div class="feat-desc">Files never leave your browser. No uploads, no servers, no data logging.</div>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">⚡</div>
+                <div class="feat-title">Instant Conversion</div>
+                <div class="feat-desc">Convert in seconds using your browser's built-in processing power.</div>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">📦</div>
+                <div class="feat-title">Batch Convert</div>
+                <div class="feat-desc">Upload multiple images at once and convert all to same format.</div>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">🎛️</div>
+                <div class="feat-title">Quality Control</div>
+                <div class="feat-desc">Adjust output quality from 10% to 100% for the perfect file size.</div>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">📄</div>
+                <div class="feat-title">PDF Support</div>
+                <div class="feat-desc">Convert PDF pages to images or combine images into a PDF.</div>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">📐</div>
+                <div class="feat-title">Resize Tool</div>
+                <div class="feat-desc">Resize to exact dimensions with aspect ratio lock and presets.</div>
+            </div>
+        </div>
+
+        <!-- FORMAT TABLE -->
+        <div class="sec-hd">Supported Formats Explained</div>
+        <table class="fmt-table">
+            <thead>
+                <tr>
+                    <th>Format</th>
+                    <th>Full Name</th>
+                    <th>Best For</th>
+                    <th>Supports Transparency</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="fmt-name">JPG</td>
+                    <td>Joint Photographic Experts Group</td>
+                    <td><span class="tag">Photos</span><span class="tag">Web</span><span class="tag">Email</span></td>
+                    <td>❌ No</td>
+                </tr>
+                <tr>
+                    <td class="fmt-name">PNG</td>
+                    <td>Portable Network Graphics</td>
+                    <td><span class="tag green">Logos</span><span class="tag green">Screenshots</span><span
+                            class="tag green">UI</span></td>
+                    <td>✅ Yes</td>
+                </tr>
+                <tr>
+                    <td class="fmt-name">WebP</td>
+                    <td>Web Picture Format (Google)</td>
+                    <td><span class="tag">Web</span><span class="tag">Modern apps</span></td>
+                    <td>✅ Yes</td>
+                </tr>
+                <tr>
+                    <td class="fmt-name">BMP</td>
+                    <td>Bitmap Image File</td>
+                    <td><span class="tag orange">Windows</span><span class="tag orange">Legacy</span></td>
+                    <td>❌ No</td>
+                </tr>
+                <tr>
+                    <td class="fmt-name">GIF</td>
+                    <td>Graphics Interchange Format</td>
+                    <td><span class="tag">Animation</span><span class="tag">Simple graphics</span></td>
+                    <td>✅ Yes (1-bit)</td>
+                </tr>
+                <tr>
+                    <td class="fmt-name">PDF</td>
+                    <td>Portable Document Format</td>
+                    <td><span class="tag">Documents</span><span class="tag">Print</span><span class="tag">Archive</span>
+                    </td>
+                    <td>✅ Yes</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- FAQ -->
+        <div class="sec-hd">Frequently Asked Questions</div>
+        <div class="faq-box">
+            <div class="faq-item">
+                <div class="faq-q">Are my files uploaded to a server?<span class="faq-icon"><svg viewBox="0 0 10 10"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M2 3.5l3 3 3-3" />
+                        </svg></span></div>
+                <div class="faq-a">No. All conversions happen entirely inside your browser using JavaScript and the
+                    Canvas API. Your files are never uploaded, transmitted, or stored anywhere. Everything is 100% local
+                    and private.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">How do I convert JPG to PNG?<span class="faq-icon"><svg viewBox="0 0 10 10"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M2 3.5l3 3 3-3" />
+                        </svg></span></div>
+                <div class="faq-a">Click the "Image Converter" tab → upload your JPG file(s) → select PNG as output
+                    format → click Convert Images → download your PNG file(s).</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Can I convert multiple images at once?<span class="faq-icon"><svg viewBox="0 0 10 10"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M2 3.5l3 3 3-3" />
+                        </svg></span></div>
+                <div class="faq-a">Yes! In the Image Converter tab, you can upload multiple images at once and they will
+                    all be converted to the selected format. Use "Download All" to get them all at once.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">How do I convert PDF to JPG?<span class="faq-icon"><svg viewBox="0 0 10 10"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M2 3.5l3 3 3-3" />
+                        </svg></span></div>
+                <div class="faq-a">Click the "PDF → Image" tab → upload your PDF → choose JPG as output → click Convert.
+                    Each PDF page will become a separate JPG image that you can download individually or all at once.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Which format is best for web — JPG, PNG, or WebP?<span class="faq-icon"><svg
+                            viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round">
+                            <path d="M2 3.5l3 3 3-3" />
+                        </svg></span></div>
+                <div class="faq-a">WebP is best for web — it's 25–35% smaller than JPG and 26% smaller than PNG with
+                    similar quality. Use PNG for logos/graphics needing transparency. Use JPG for photos where file size
+                    matters and transparency isn't needed.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Is there a file size limit?<span class="faq-icon"><svg viewBox="0 0 10 10"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M2 3.5l3 3 3-3" />
+                        </svg></span></div>
+                <div class="faq-a">Image conversion supports up to 20MB per file. PDF conversion supports up to 50MB.
+                    Since everything runs in your browser, very large files may be slower on older devices.</div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <strong>Textaura</strong>
+                Free Online Text Tools Suite
+            </div>
+            <div class="footer-links">
+                <a class="footer-link" href="index.html">Home</a>
+                <a class="footer-link" href="symbols.html">Symbols</a>
+                <a class="footer-link" href="qrcode.html">QR Code</a>
+                <a class="footer-link" href="decorator.html">Decorator</a>
+                <a class="footer-link" href="moretools.html">More Tools</a>
+                <a class="footer-link" href="about.html">About</a>
+                <a class="footer-link" href="contact.html">Contact</a>
+                <a class="footer-link" href="policy.html">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 textaura.com · All rights reserved</span>
+            <span>Bold · Italic · Gothic · Script · Bubble · QR Code · Symbols · Decorator</span>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast"><span class="toast-dot"></span><span id="toastMsg">Done!</span></div>
+
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="scripts/imgpdf.js"></script>
+    <script src="scripts/tog-ham.js"></script>
+</body>
+
+</html>

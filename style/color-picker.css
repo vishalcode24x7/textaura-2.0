@@ -289,7 +289,7 @@ input[type=text]:focus {
     left: 50%;
     transform: translateX(-50%) translateY(80px);
     background: var(--ink);
-    color: #fff;
+    color: var(--white);
     font-size: 13px;
     font-weight: 600;
     padding: 10px 20px;

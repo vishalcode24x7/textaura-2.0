@@ -152,6 +152,7 @@ input::placeholder {
 }
 
 .case-card:hover {
+    overflow: hidden;
     border-color: var(--primary);
     box-shadow: 0 4px 16px rgba(91, 79, 233, .08);
     transform: translateY(-2px)
@@ -239,7 +240,7 @@ input::placeholder {
     left: 50%;
     transform: translateX(-50%) translateY(80px);
     background: var(--ink);
-    color: #fff;
+    color: var(--white);
     font-size: 13px;
     font-weight: 600;
     padding: 10px 20px;
