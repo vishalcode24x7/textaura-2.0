@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Textaura | Free Tools Tips, Guides & Tutorials</title>
+  <meta name="description"
+    content="Textaura Blog — Free guides on fancy text, cool fonts for Instagram, QR codes, password security, file conversion and more. Learn how to use free online tools.">
+  <meta name="keywords"
+    content="textaura blog, fancy text guide, cool fonts instagram, qr code tutorial, binary decimal, password security, free tools tips">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Textaura">
+  <meta name="theme-color" content="#5B4FE9">
+  <link rel="canonical" href="https://textaura.org/blog">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://textaura.org/blog">
+  <meta property="og:title" content="Blog — Textaura | Tips, Guides & Tutorials">
+  <meta property="og:description"
+    content="Free guides on fancy text, Instagram fonts, QR codes, password security and more.">
+  <meta property="og:site_name" content="Textaura">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Blog",
+  "name":"Textaura Blog",
+  "url":"https://textaura.org/blog",
+  "description":"Tips, guides and tutorials on text tools, Instagram fonts, QR codes, file conversion and more.",
+  "publisher":{"@type":"Organization","name":"Textaura","url":"https://textaura.org"}
+}
+</script>
+
+  <!-- Google AdSense -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script> -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+
+  <style>
+    /* ── BLOG PAGE STYLES ── */
+    .blog-wrapper {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem
+    }
+
+    /* ── HERO ── */
+    .blog-hero {
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center
+    }
+
+    .blog-hero h1 {
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      font-weight: 800;
+      color: var(--ink);
+      letter-spacing: -1px;
+      margin-bottom: .5rem
+    }
+
+    .blog-hero h1 span {
+      background: linear-gradient(135deg, var(--primary), #A855F7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent
+    }
+
+    .blog-hero p {
+      font-size: .9rem;
+      color: var(--muted);
+      max-width: 440px;
+      margin: 0 auto;
+      line-height: 1.7
+    }
+
+    /* ── AD SLOT ── */
+    .ad-slot {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      text-align: center;
+      padding: 12px;
+      margin-bottom: 24px;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    /* ── LAYOUT ── */
+    .blog-layout {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 28px;
+      align-items: start
+    }
+
+    /* ── ARTICLE LIST ── */
+    .article-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1px
+    }
+
+    .article-item {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 22px;
+      transition: border-color .15s, box-shadow .15s;
+      margin-bottom: 12px;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start
+    }
+
+    .article-item:hover {
+      border-color: var(--primary);
+      box-shadow: 0 4px 16px rgba(91, 79, 233, .07)
+    }
+
+    .article-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      flex-shrink: 0
+    }
+
+    .article-content {
+      flex: 1;
+      min-width: 0
+    }
+
+    .article-cat {
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 5px
+    }
+
+    .article-title {
+      font-size: .95rem;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.35;
+      margin-bottom: 6px;
+      letter-spacing: -.2px
+    }
+
+    .article-title a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    .article-title a:hover {
+      color: var(--primary)
+    }
+
+    .article-excerpt {
+      font-size: .83rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 10px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden
+    }
+
+    .article-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px
+    }
+
+    .article-meta {
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .article-read {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      white-space: nowrap
+    }
+
+    .article-read:hover {
+      gap: 6px
+    }
+
+    .article-read svg {
+      width: 12px;
+      height: 12px;
+      transition: transform .15s
+    }
+
+    .article-read:hover svg {
+      transform: translateX(3px)
+    }
+
+    /* ── AD IN LIST ── */
+    .ad-in-list {
+      background: var(--white);
+      border: 1px dashed var(--border);
+      border-radius: 10px;
+      min-height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-bottom: 12px
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      position: sticky;
+      top: 80px
+    }
+
+    .sb-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 18px
+    }
+
+    .sb-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 13px
+    }
+
+    /* POPULAR */
+    .popular-row {
+      display: flex;
+      gap: 10px;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      align-items: center
+    }
+
+    .popular-row:last-child {
+      border-bottom: none
+    }
+
+    .popular-num {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--border);
+      min-width: 22px;
+      line-height: 1;
+      flex-shrink: 0
+    }
+
+    .popular-title {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--ink2);
+      line-height: 1.4
+    }
+
+    .popular-row:hover .popular-title {
+      color: var(--primary)
+    }
+
+    /* CATEGORIES */
+    .cat-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px
+    }
+
+    .cat-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 10px;
+      background: var(--bg);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background .12s
+    }
+
+    .cat-row:hover {
+      background: var(--primary-light)
+    }
+
+    .cat-row:hover .cat-name {
+      color: var(--primary)
+    }
+
+    .cat-left {
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .cat-emoji {
+      font-size: 15px
+    }
+
+    .cat-name {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--ink2);
+      transition: color .12s
+    }
+
+    .cat-count {
+      font-size: 10.5px;
+      color: var(--muted);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 1px 8px;
+      font-weight: 600
+    }
+
+    /* TOOLS LINK */
+    .tools-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px
+    }
+
+    .tool-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 11px;
+      background: var(--bg);
+      border-radius: 9px;
+      text-decoration: none;
+      transition: background .12s
+    }
+
+    .tool-row:hover {
+      background: var(--primary-light)
+    }
+
+    .tool-row:hover .tool-name {
+      color: var(--primary)
+    }
+
+    .tool-emoji {
+      font-size: 16px;
+      flex-shrink: 0
+    }
+
+    .tool-name {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--ink2);
+      transition: color .12s
+    }
+
+    /* AD SIDEBAR */
+    .ad-sidebar {
+      background: var(--white);
+      border: 1px dashed var(--border);
+      border-radius: 10px;
+      min-height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .05em
+    }
+
+    /* ── PAGINATION ── */
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 1rem
+    }
+
+    .pg-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      border: 1.5px solid var(--border);
+      background: var(--white);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink2);
+      cursor: pointer;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .15s
+    }
+
+    .pg-btn:hover,
+    .pg-btn.active {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--primary-light)
+    }
+
+    .pg-btn.active {
+      background: var(--primary);
+      color: #fff
+    }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:760px) {
+      .blog-layout {
+        grid-template-columns: 1fr
+      }
+
+      .sidebar {
+        position: static
+      }
+
+      .article-item {
+        flex-direction: column;
+        gap: 10px
+      }
+
+      .article-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav>
+    <span class="nav-logo">Textaura</span>
+    <div class="nav-menu">
+      <a class="nav-item" href="index.html">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <path d="M2 6.5L8 2l6 4.5V14H2V6.5z" />
+        </svg>Home
+      </a>
+      <a class="nav-item" href="symbols.html">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <circle cx="8" cy="8" r="6" />
+          <path d="M8 5v3l2 2" />
+        </svg>Symbols
+      </a>
+      <a class="nav-item" href="qrcode.html">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+          stroke-linejoin="round">
+          <rect x="2" y="2" width="5" height="5" rx="1" />
+          <rect x="9" y="2" width="5" height="5" rx="1" />
+          <rect x="2" y="9" width="5" height="5" rx="1" />
+          <path d="M9 9h2v2H9zm2 2h2v2h-2zm0-2h2" />
+        </svg>QR Code
+      </a>
+      <a class="nav-item" href="decorator.html">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <path d="M3 13l3-3 5-5-2-2-5 5-3 3 2 2z" />
+          <path d="M11 3l2 2" />
+        </svg>Decorator
+      </a>
+      <a class="nav-item" href="moretools.html">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <rect x="2" y="2" width="5" height="5" rx="1" />
+          <rect x="9" y="2" width="5" height="5" rx="1" />
+          <rect x="2" y="9" width="5" height="5" rx="1" />
+          <rect x="9" y="9" width="5" height="5" rx="1" />
+        </svg>More Tools
+      </a>
+      <a class="nav-item active-page" href="blog.html">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+          stroke-linejoin="round">
+          <rect x="2" y="2" width="12" height="12" rx="2" />
+          <path d="M5 6h6M5 9h4" />
+        </svg>Blog
+      </a>
+      <a class="nav-item" href="about.html">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <circle cx="8" cy="8" r="6" />
+          <path d="M8 7v5M8 5.5v.5" />
+        </svg>About
+      </a>
+    </div>
+    <div class="nav-right">
+      <span class="nav-badge">Free · No Signup</span>
+      <button class="theme-toggle" onclick="toggleTheme()">
+        <div class="toggle-track"><span>☀️</span><span>🌙</span></div>
+        <div class="toggle-thumb" id="toggleThumb">☀️</div>
+      </button>
+      <button class="hamburger" onclick="toggleDrawer()"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a class="mob-item" href="index.html" onclick="toggleDrawer()">🏠 Home</a>
+    <a class="mob-item" href="symbols.html" onclick="toggleDrawer()">✦ Symbols</a>
+    <a class="mob-item" href="qrcode.html" onclick="toggleDrawer()">⬛ QR Code</a>
+    <a class="mob-item" href="decorator.html" onclick="toggleDrawer()">✏️ Decorator</a>
+    <a class="mob-item" href="moretools.html" onclick="toggleDrawer()">⚙️ More Tools</a>
+    <a class="mob-item active-page" href="blog.html" onclick="toggleDrawer()">📝 Blog</a>
+    <a class="mob-item" href="about.html" onclick="toggleDrawer()">ℹ️ About</a>
+    <a class="mob-item" href="contact.html" onclick="toggleDrawer()">✉️ Contact</a>
+  </div>
+
+
+  <!-- ══ HERO ══ -->
+  <div class="blog-hero">
+    <h1>Textaura <span>Blog</span></h1>
+    <p>Tips, guides, and tutorials on text tools, Instagram tricks, QR codes, security, and more.</p>
+  </div>
+
+
+  <div class="blog-wrapper">
+
+    <!-- ── AD SLOT: TOP BANNER (728x90 leaderboard) ── -->
+    <div class="ad-slot" style="min-height:90px;max-width:728px;margin:0 auto 24px">
+      <!-- AdSense Top Banner Ad -->
+      <!--
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXX"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+      Advertisement
+    </div>
+
+    <div class="blog-layout">
+
+      <!-- ══ MAIN CONTENT ══ -->
+      <main>
+        <div class="article-list">
+
+          <!-- ARTICLE 1 -->
+          <div class="article-item">
+            <div class="article-icon" style="background:linear-gradient(135deg,#FFE8F0,#FFD0E0)">📸</div>
+            <div class="article-content">
+              <div class="article-cat">📸 Instagram</div>
+              <div class="article-title"><a href="blog-instagram-fonts.html">How to Get Cool Fonts on Instagram Bio —
+                  Complete Guide 2025</a></div>
+              <p class="article-excerpt">Want your Instagram bio to stand out? Learn how to use fancy Unicode fonts that
+                work on Instagram without any app or download.</p>
+              <div class="article-footer">
+                <div class="article-meta">
+                  <span>📅 Mar 20, 2025</span>
+                  <span>⏱ 8 min read</span>
+                </div>
+                <a class="article-read" href="blog-instagram-fonts.html">Read <svg viewBox="0 0 12 12" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 6h8M7 3l3 3-3 3" />
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 2 -->
+          <div class="article-item">
+            <div class="article-icon" style="background:linear-gradient(135deg,#E8F4FD,#D0E8F8)">⬛</div>
+            <div class="article-content">
+              <div class="article-cat">🛠️ Tools Guide</div>
+              <div class="article-title"><a href="blog-qr-code-guide.html">How to Create a Custom QR Code for Free —
+                  Complete Guide</a></div>
+              <p class="article-excerpt">QR codes are everywhere. Learn how to create beautiful, custom-colored QR codes
+                for your business, social media, or personal use — free.</p>
+              <div class="article-footer">
+                <div class="article-meta">
+                  <span>📅 Mar 15, 2025</span>
+                  <span>⏱ 6 min read</span>
+                </div>
+                <a class="article-read" href="blog-qr-code-guide.html">Read <svg viewBox="0 0 12 12" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 6h8M7 3l3 3-3 3" />
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 3 -->
+          <div class="article-item">
+            <div class="article-icon" style="background:linear-gradient(135deg,#FFF0F0,#FFD9D9)">🔒</div>
+            <div class="article-content">
+              <div class="article-cat">🔒 Security</div>
+              <div class="article-title"><a href="blog-strong-password.html">How to Create a Strong Password That's Hard
+                  to Crack</a></div>
+              <p class="article-excerpt">Most people use weak passwords. Learn what makes a password strong, how hackers
+                crack them, and how to generate unbreakable passwords for free.</p>
+              <div class="article-footer">
+                <div class="article-meta">
+                  <span>📅 Mar 12, 2025</span>
+                  <span>⏱ 7 min read</span>
+                </div>
+                <a class="article-read" href="blog-strong-password.html">Read <svg viewBox="0 0 12 12" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 6h8M7 3l3 3-3 3" />
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── AD IN LIST (300x250 Rectangle) ── -->
+          <div class="ad-in-list" style="min-height:100px">
+            <!-- AdSense In-Article / Rectangle Ad -->
+            <!--
+          <ins class="adsbygoogle"
+               style="display:block;text-align:center"
+               data-ad-layout="in-article"
+               data-ad-format="fluid"
+               data-ad-client="ca-pub-XXXXXXXXXX"
+               data-ad-slot="XXXXXXXXXX"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+          -->
+            Advertisement
+          </div>
+
+          <!-- ARTICLE 4 -->
+          <div class="article-item">
+            <div class="article-icon" style="background:linear-gradient(135deg,#E8E8FD,#D0D0F8)">💻</div>
+            <div class="article-content">
+              <div class="article-cat">💻 Tech Tips</div>
+              <div class="article-title"><a href="blog-binary-decimal.html">Binary to Decimal — Easy Explanation with
+                  Examples</a></div>
+              <p class="article-excerpt">Confused by binary numbers? This beginner-friendly guide explains binary,
+                decimal, hex, and octal with simple examples and step-by-step conversion.</p>
+              <div class="article-footer">
+                <div class="article-meta">
+                  <span>📅 Mar 10, 2025</span>
+                  <span>⏱ 9 min read</span>
+                </div>
+                <a class="article-read" href="blog-binary-decimal.html">Read <svg viewBox="0 0 12 12" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 6h8M7 3l3 3-3 3" />
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 5 -->
+          <div class="article-item">
+            <div class="article-icon" style="background:linear-gradient(135deg,#E8FBF7,#C5F2E8)">🎨</div>
+            <div class="article-content">
+              <div class="article-cat">🛠️ Tools Guide</div>
+              <div class="article-title"><a href="blog-jpg-png-webp.html">JPG vs PNG vs WebP — Which Image Format Should
+                  You Use?</a></div>
+              <p class="article-excerpt">Confused about image formats? This guide explains the difference between JPG,
+                PNG, and WebP — when to use each and how to convert between them free.</p>
+              <div class="article-footer">
+                <div class="article-meta">
+                  <span>📅 Mar 3, 2025</span>
+                  <span>⏱ 6 min read</span>
+                </div>
+                <a class="article-read" href="blog-jpg-png-webp.html">Read <svg viewBox="0 0 12 12" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 6h8M7 3l3 3-3 3" />
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 6 (placeholder — aur articles add karo) -->
+          <div class="article-item">
+            <div class="article-icon" style="background:linear-gradient(135deg,#FFF5E9,#FFECD2)">🔗</div>
+            <div class="article-content">
+              <div class="article-cat">🛠️ Tools Guide</div>
+              <div class="article-title"><a href="blog-url-shortener.html">Why You Should Shorten Your URLs — Benefits &
+                  How To</a></div>
+              <p class="article-excerpt">Long URLs look unprofessional and are hard to share. Learn why short links
+                matter for marketing, social media, and user experience.</p>
+              <div class="article-footer">
+                <div class="article-meta">
+                  <span>📅 Mar 8, 2025</span>
+                  <span>⏱ 4 min read</span>
+                </div>
+                <a class="article-read" href="blog-url-shortener.html">Read <svg viewBox="0 0 12 12" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 6h8M7 3l3 3-3 3" />
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 7 -->
+          <div class="article-item">
+            <div class="article-icon" style="background:linear-gradient(135deg,#EEF0FF,#DDD9FF)">✨</div>
+            <div class="article-content">
+              <div class="article-cat">✍️ Fonts & Text</div>
+              <div class="article-title"><a href="blog-bold-text.html">How to Make Bold Text Online — Works on WhatsApp,
+                  Instagram & Twitter</a></div>
+              <p class="article-excerpt">Bold text makes your messages stand out. Learn how to generate bold Unicode
+                text that works on any platform without any formatting options.</p>
+              <div class="article-footer">
+                <div class="article-meta">
+                  <span>📅 Mar 18, 2025</span>
+                  <span>⏱ 5 min read</span>
+                </div>
+                <a class="article-read" href="blog-bold-text.html">Read <svg viewBox="0 0 12 12" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 6h8M7 3l3 3-3 3" />
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── AD IN LIST (second) ── -->
+          <div class="ad-in-list" style="min-height:100px">
+            <!-- AdSense Rectangle Ad -->
+            <!--
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-XXXXXXXXXX"
+               data-ad-slot="XXXXXXXXXX"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+          -->
+            Advertisement
+          </div>
+
+          <!-- ARTICLE 8 -->
+          <div class="article-item">
+            <div class="article-icon" style="background:linear-gradient(135deg,#F0F0FF,#DDD9FF)">𝒞</div>
+            <div class="article-content">
+              <div class="article-cat">✍️ Fonts & Text</div>
+              <div class="article-title"><a href="blog-cursive-text.html">Cursive Text Generator — How to Type in
+                  Cursive Online Free</a></div>
+              <p class="article-excerpt">Cursive text looks beautiful in Instagram bios, WhatsApp status, and social
+                media posts. Learn how to generate cursive Unicode text for free.</p>
+              <div class="article-footer">
+                <div class="article-meta">
+                  <span>📅 Mar 1, 2025</span>
+                  <span>⏱ 4 min read</span>
+                </div>
+                <a class="article-read" href="blog-cursive-text.html">Read <svg viewBox="0 0 12 12" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 6h8M7 3l3 3-3 3" />
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 9 -->
+          <div class="article-item">
+            <div class="article-icon" style="background:linear-gradient(135deg,#FFF5E9,#FFECD2)">📄</div>
+            <div class="article-content">
+              <div class="article-cat">🛠️ Tools Guide</div>
+              <div class="article-title"><a href="blog-lorem-ipsum.html">What is Lorem Ipsum? Why Designers Use It —
+                  Explained Simply</a></div>
+              <p class="article-excerpt">Lorem Ipsum has been used for 500+ years in design. Learn its history, why it's
+                still used today, and how to generate custom placeholder text free.</p>
+              <div class="article-footer">
+                <div class="article-meta">
+                  <span>📅 Feb 28, 2025</span>
+                  <span>⏱ 5 min read</span>
+                </div>
+                <a class="article-read" href="blog-lorem-ipsum.html">Read <svg viewBox="0 0 12 12" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 6h8M7 3l3 3-3 3" />
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 10 -->
+          <div class="article-item">
+            <div class="article-icon" style="background:linear-gradient(135deg,#FFE8F0,#FFD0E0)">★</div>
+            <div class="article-content">
+              <div class="article-cat">📸 Instagram</div>
+              <div class="article-title"><a href="blog-instagram-symbols.html">50+ Best Symbols for Instagram Bio — Copy
+                  Paste Ready</a></div>
+              <p class="article-excerpt">Make your Instagram bio unique with Unicode symbols. Hearts, stars, arrows,
+                crowns and more — all free to copy and paste directly into Instagram.</p>
+              <div class="article-footer">
+                <div class="article-meta">
+                  <span>📅 Mar 5, 2025</span>
+                  <span>⏱ 3 min read</span>
+                </div>
+                <a class="article-read" href="blog-instagram-symbols.html">Read <svg viewBox="0 0 12 12" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 6h8M7 3l3 3-3 3" />
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /article-list -->
+
+        <!-- PAGINATION -->
+        <div class="pagination">
+          <button class="pg-btn active">1</button>
+          <button class="pg-btn">2</button>
+          <button class="pg-btn">3</button>
+          <button class="pg-btn" style="width:auto;padding:0 14px">Next →</button>
+        </div>
+
+      </main>
+
+      <!-- ══ SIDEBAR ══ -->
+      <aside class="sidebar">
+
+        <!-- SIDEBAR AD (300x250) -->
+        <div class="ad-sidebar" style="min-height:250px">
+          <!-- AdSense Sidebar Rectangle -->
+          <!--
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        -->
+          Advertisement
+        </div>
+
+        <!-- CATEGORIES -->
+        <div class="sb-card">
+          <div class="sb-title">Categories</div>
+          <div class="cat-list">
+            <a class="cat-row" href="#">
+              <div class="cat-left"><span class="cat-emoji">📸</span><span class="cat-name">Instagram Tips</span></div>
+              <span class="cat-count">3</span>
+            </a>
+            <a class="cat-row" href="#">
+              <div class="cat-left"><span class="cat-emoji">✍️</span><span class="cat-name">Fonts & Text</span></div>
+              <span class="cat-count">3</span>
+            </a>
+            <a class="cat-row" href="#">
+              <div class="cat-left"><span class="cat-emoji">🛠️</span><span class="cat-name">Tools Guide</span></div>
+              <span class="cat-count">4</span>
+            </a>
+            <a class="cat-row" href="#">
+              <div class="cat-left"><span class="cat-emoji">🔒</span><span class="cat-name">Security</span></div>
+              <span class="cat-count">1</span>
+            </a>
+            <a class="cat-row" href="#">
+              <div class="cat-left"><span class="cat-emoji">💻</span><span class="cat-name">Tech Tips</span></div>
+              <span class="cat-count">1</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- POPULAR POSTS -->
+        <div class="sb-card">
+          <div class="sb-title">Popular Posts</div>
+          <a class="popular-row" href="blog-instagram-fonts.html"><span class="popular-num">01</span><span
+              class="popular-title">Cool Fonts for Instagram Bio</span></a>
+          <a class="popular-row" href="blog-qr-code-guide.html"><span class="popular-num">02</span><span
+              class="popular-title">Create a Custom QR Code Free</span></a>
+          <a class="popular-row" href="blog-strong-password.html"><span class="popular-num">03</span><span
+              class="popular-title">How to Create a Strong Password</span></a>
+          <a class="popular-row" href="blog-binary-decimal.html"><span class="popular-num">04</span><span
+              class="popular-title">Binary to Decimal Guide</span></a>
+          <a class="popular-row" href="blog-jpg-png-webp.html"><span class="popular-num">05</span><span
+              class="popular-title">JPG vs PNG vs WebP Guide</span></a>
+        </div>
+
+        <!-- SIDEBAR AD 2 (300x600) -->
+        <div class="ad-sidebar" style="min-height:200px">
+          <!-- AdSense Half Page Ad -->
+          <!--
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        -->
+          Advertisement
+        </div>
+
+        <!-- FREE TOOLS -->
+        <div class="sb-card">
+          <div class="sb-title">Try Free Tools</div>
+          <div class="tools-list">
+            <a class="tool-row" href="index.html"><span class="tool-emoji">✨</span><span class="tool-name">Fancy Text
+                Generator</span></a>
+            <a class="tool-row" href="qrcode.html"><span class="tool-emoji">⬛</span><span class="tool-name">QR Code
+                Generator</span></a>
+            <a class="tool-row" href="password-generator.html"><span class="tool-emoji">🔒</span><span
+                class="tool-name">Password Generator</span></a>
+            <a class="tool-row" href="word-counter.html"><span class="tool-emoji">📊</span><span class="tool-name">Word
+                Counter</span></a>
+            <a class="tool-row" href="file-converter.html"><span class="tool-emoji">🔄</span><span
+                class="tool-name">File Converter</span></a>
+            <a class="tool-row" href="moretools.html"><span class="tool-emoji">⚙️</span><span class="tool-name">All
+                Tools →</span></a>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+
+    <!-- ── BOTTOM AD (728x90) ── -->
+    <div class="ad-slot" style="min-height:90px;max-width:728px;margin:2rem auto 0">
+      <!-- AdSense Bottom Banner -->
+      <!--
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXX"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+      Advertisement
+    </div>
+
+  </div><!-- /blog-wrapper -->
+
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>Textaura</strong>
+        Free Online Text Tools Suite
+      </div>
+      <div class="footer-links">
+        <a class="footer-link" href="index.html">Home</a>
+        <a class="footer-link" href="symbols.html">Symbols</a>
+        <a class="footer-link" href="qrcode.html">QR Code</a>
+        <a class="footer-link" href="moretools.html">More Tools</a>
+        <a class="footer-link" href="blog.html">Blog</a>
+        <a class="footer-link" href="about.html">About</a>
+        <a class="footer-link" href="contact.html">Contact</a>
+        <a class="footer-link" href="policy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Textaura.org · All rights reserved</span>
+      <span>Free Text Tools · No Signup · Built with ♥ in India</span>
+    </div>
+  </footer>
+
+
+  <script>
+    function toggleTheme() {
+      const d = document.documentElement.classList.toggle('dark');
+      document.getElementById('toggleThumb').textContent = d ? '🌙' : '☀️';
+      localStorage.setItem('textaura-theme', d ? 'dark' : 'light');
+    }
+    (function () {
+      const s = localStorage.getItem('textaura-theme');
+      const p = window.matchMedia('(prefers-color-scheme:dark)').matches;
+      if (s === 'dark' || (s === null && p)) {
+        document.documentElement.classList.add('dark');
+        document.addEventListener('DOMContentLoaded', () => {
+          const t = document.getElementById('toggleThumb');
+          if (t) t.textContent = '🌙';
+        });
+      }
+    })();
+    const hamburger = document.querySelector('.hamburger');
+    const drawer = document.getElementById('mobileDrawer');
+    function toggleDrawer() { drawer.classList.toggle('open'); }
+    document.addEventListener('click', e => {
+      if (!drawer.contains(e.target) && !hamburger.contains(e.target))
+        drawer.classList.remove('open');
+    });
+  </script>
+</body>
+
+</html>

@@ -1,3 +1,7 @@
+@font-face {
+    font-family: horror;
+    src: url(/Another\ Danger\ -\ Demo.otf);
+}
 *,
 *::before,
 *::after {
@@ -14,7 +18,7 @@
     --ink2: #3A3952;
     --muted: #8B8BA7;
     --border: #E2E4F0;
-    --primary: #5B4FE9;
+    --primary: #ff0000;
     --primary-light: #EEF0FF;
     --c1: #FF6B6B;
     --c1l: #FFF0F0;
@@ -80,7 +84,7 @@ nav {
 }
 
 .nav-logo {
-    font-size: 1.35rem;
+    font-size: 1.20rem;
     font-weight: 800;
     background: linear-gradient(135deg, var(--primary), #A855F7);
     -webkit-background-clip: text;
@@ -264,6 +268,8 @@ nav {
     font-style: normal;
     background: linear-gradient(135deg, var(--primary), #A855F7);
     -webkit-background-clip: text;
+    font-family: "horror";
+    letter-spacing: 5px;
     -webkit-text-fill-color: transparent;
 }
 
