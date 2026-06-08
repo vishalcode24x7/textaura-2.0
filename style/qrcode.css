@@ -1,4 +1,7 @@
-/* ── PAGE HERO ── */
+@font-face {
+    font-family: horror;
+    src: url(/Another\ Danger\ -\ Demo.otf);
+}
 .page-hero {
     text-align: center;
     padding: 3rem 1.5rem 2rem;
@@ -40,7 +43,11 @@
 }
 
 .page-hero h1 em {
+    font-family: "horror";
+    letter-spacing: 5px;
     font-style: normal;
+    position: relative;
+    bottom: 4px;
     background: linear-gradient(135deg, var(--primary), #A855F7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
