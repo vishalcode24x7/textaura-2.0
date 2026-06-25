@@ -1,7 +1,7 @@
-@font-face {
+/* @font-face {
     font-family: horror;
     src: url(/Another\ Danger\ -\ Demo.otf);
-}
+} */
 html,
 body {
     width: 100%;
@@ -55,9 +55,8 @@ body {
     gap: 0.5rem;
 }
 
-.page-hero h1 em {
-    font-family: "horror";
-    letter-spacing: 5px;
+.page-hero h1 span{
+    font-style: none;
     background: linear-gradient(135deg, var(--primary), #A855F7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
