@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Theory for Beginners - Textaura</title>
+    <meta name="description"
+        content="A beginner-friendly introduction to how colors work together, covering the color wheel, harmony rules, and practical tips before you start picking a palette.">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #ffffff;
+            --bg-soft: #f6f7f9;
+            --card-bg: #ffffff;
+            --text: #1a1a2e;
+            --text-soft: #5a5a72;
+            --border: #e4e5ea;
+            --accent: #4f46e5;
+            --radius: 12px;
+            --nav-h: 68px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        header.navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            height: var(--nav-h);
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        nav.nav-links {
+            display: flex;
+            gap: 26px;
+            align-items: center;
+        }
+
+        nav.nav-links a {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-soft);
+        }
+
+        nav.nav-links a:hover,
+        nav.nav-links a.active {
+            color: var(--accent);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .badge-pill {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent);
+            background: #eef0fd;
+            padding: 6px 14px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        @media(max-width:860px) {
+            nav.nav-links {
+                position: fixed;
+                top: var(--nav-h);
+                left: 0;
+                right: 0;
+                background: var(--bg);
+                flex-direction: column;
+                padding: 20px 24px;
+                border-bottom: 1px solid var(--border);
+                display: none;
+                gap: 16px;
+            }
+
+            nav.nav-links.show {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .badge-pill {
+                display: none;
+            }
+        }
+
+        .breadcrumb {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 18px 24px 0;
+            font-size: 13px;
+            color: var(--text-soft);
+        }
+
+        .breadcrumb a {
+            color: var(--accent);
+        }
+
+        .article-header {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 28px 24px 30px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .article-cat {
+            display: inline-block;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--accent);
+            background: #eef0fd;
+            padding: 5px 14px;
+            border-radius: 999px;
+            text-transform: uppercase;
+            letter-spacing: .03em;
+            margin-bottom: 16px;
+        }
+
+        .article-header h1 {
+            font-size: clamp(28px, 4.5vw, 40px);
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 16px;
+        }
+
+        .article-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 14px;
+            color: var(--text-soft);
+        }
+
+        .article-body {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 36px 24px 0;
+        }
+
+        .article-body p {
+            font-size: 16.5px;
+            color: var(--text);
+            margin-bottom: 20px;
+        }
+
+        .article-body h2 {
+            font-size: 26px;
+            font-weight: 800;
+            margin: 42px 0 16px;
+            color: var(--text);
+        }
+
+        .article-body h3 {
+            font-size: 19px;
+            font-weight: 700;
+            margin: 28px 0 12px;
+            color: var(--text);
+        }
+
+        .article-body ul,
+        .article-body ol {
+            margin: 0 0 22px 22px;
+        }
+
+        .article-body li {
+            font-size: 16.5px;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        .article-body strong {
+            font-weight: 700;
+        }
+
+        .bio-grid {
+            background: var(--bg-soft);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .bio-grid h3 {
+            margin-top: 0;
+        }
+
+        .swatch-row {
+            display: flex;
+            gap: 10px;
+            margin: 14px 0;
+            flex-wrap: wrap;
+        }
+
+        .swatch {
+            width: 54px;
+            height: 54px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            font-size: 10px;
+            color: #fff;
+            font-weight: 700;
+            padding-bottom: 4px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 24px;
+            font-size: 15px;
+        }
+
+        table th,
+        table td {
+            border: 1px solid var(--border);
+            padding: 10px 14px;
+            text-align: left;
+        }
+
+        table th {
+            background: var(--bg-soft);
+            font-weight: 700;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 18px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-item h3 {
+            margin: 0 0 8px;
+            font-size: 17px;
+        }
+
+        .faq-item p {
+            margin-bottom: 0;
+            color: var(--text-soft);
+        }
+
+        .inline-cta {
+            background: var(--bg-soft);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 22px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .inline-cta p {
+            margin-bottom: 14px;
+            font-size: 15.5px;
+        }
+
+        .inline-cta a {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            font-weight: 700;
+            font-size: 14.5px;
+            padding: 11px 26px;
+            border-radius: 8px;
+        }
+
+        .related-section {
+            max-width: 760px;
+            margin: 50px auto 0;
+            padding: 30px 24px;
+            border-top: 1px solid var(--border);
+        }
+
+        .related-section h2 {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        @media(max-width:600px) {
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .related-card {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px;
+            display: block;
+        }
+
+        .related-card span {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: .03em;
+        }
+
+        .related-card h4 {
+            font-size: 15.5px;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        .blog-cta {
+            background: var(--bg-soft);
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 54px 24px;
+            margin-top: 50px;
+        }
+
+        .blog-cta h2 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .blog-cta p {
+            color: var(--text-soft);
+            margin-bottom: 22px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            font-weight: 700;
+            font-size: 15px;
+            padding: 13px 30px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            padding: 46px 24px 24px;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-brand h3 {
+            font-size: 19px;
+            font-weight: 800;
+            margin-bottom: 6px;
+            color: var(--accent);
+        }
+
+        .footer-brand p {
+            color: var(--text-soft);
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-col a {
+            display: block;
+            color: var(--text-soft);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            font-size: 13px;
+            color: var(--text-soft);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">Textaura</a>
+            <nav class="nav-links" id="navLinks">
+                <a href="../index.html">Home</a>
+                <a href="../symbols.html">Symbols</a>
+                <a href="../qrcode.html">QR Code</a>
+                <a href="../decorator.html">Decorator</a>
+                <a href="../moretools.html">More Tools</a>
+                <a href="../blog.html" class="active">Blog</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-right">
+                <span class="badge-pill">50+ Styles · Free</span>
+                <button class="menu-btn" id="menuBtn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">Home</a> / <a href="../blog.html">Blog</a> / Color Theory for Beginners
+    </div>
+
+    <div class="article-header">
+        <span class="article-cat">Color Picker</span>
+        <h1>Color Theory for Beginners</h1>
+        <div class="article-meta">
+            <span>9 min read</span>
+            <span>Updated 2026</span>
+        </div>
+    </div>
+
+    <article class="article-body">
+
+        <p>The first time I tried picking colors for a personal project, I genuinely thought it would take twenty
+            minutes. Three hours later I had a folder of color codes that all looked fine individually and somehow
+            terrible together. What I was missing wasn't talent, it was a basic understanding of how colors actually
+            relate to each other, the kind of foundational knowledge that turns color selection from random guessing
+            into something you can reason through deliberately.</p>
+
+        <p>This guide covers the core ideas behind color theory in plain language, no design degree required, so you can
+            walk into your next palette decision with an actual strategy instead of just clicking around a color wheel
+            hoping something works.</p>
+
+        <h2>The Color Wheel: Where Everything Starts</h2>
+
+        <p>The color wheel is the foundational tool of color theory, a circular arrangement of colors based on their
+            relationships to each other. It starts with three primary colors, red, blue, and yellow, which can't be
+            created by mixing other colors. Combining two primaries creates secondary colors, orange, green, and purple.
+            Combining a primary with an adjacent secondary creates tertiary colors, giving you the full range of hues
+            typically shown on a standard color wheel.</p>
+
+        <p>Understanding this structure matters because nearly every color harmony rule that follows is really just a
+            description of specific relationships between points on this wheel.</p>
+
+        <h2>Complementary Colors</h2>
+
+        <div class="bio-grid">
+            <h3>Colors directly opposite each other on the wheel</h3>
+            <div class="swatch-row">
+                <div class="swatch" style="background:#dc2626;">Red</div>
+                <div class="swatch" style="background:#16a34a;">Green</div>
+            </div>
+            <p>Complementary pairs create maximum contrast and visual energy when placed next to each other. This makes
+                them great for drawing attention to something specific, a call-to-action button against a complementary
+                background, for instance, but risky for large areas since the intensity can feel overwhelming if
+                overused.</p>
+        </div>
+
+        <h2>Analogous Colors</h2>
+
+        <div class="bio-grid">
+            <h3>Colors next to each other on the wheel</h3>
+            <div class="swatch-row">
+                <div class="swatch" style="background:#2563eb;">Blue</div>
+                <div class="swatch" style="background:#0891b2;">Teal</div>
+                <div class="swatch" style="background:#16a34a;">Green</div>
+            </div>
+            <p>Analogous color schemes feel naturally harmonious because the colors share underlying similarities. This
+                makes them a safe, pleasant choice for backgrounds, branding, or any design where you want cohesion
+                without dramatic contrast.</p>
+        </div>
+
+        <h2>Triadic Colors</h2>
+
+        <div class="bio-grid">
+            <h3>Three colors evenly spaced around the wheel</h3>
+            <div class="swatch-row">
+                <div class="swatch" style="background:#dc2626;">Red</div>
+                <div class="swatch" style="background:#ca8a04;">Yellow</div>
+                <div class="swatch" style="background:#2563eb;">Blue</div>
+            </div>
+            <p>Triadic schemes offer more variety than analogous palettes while still feeling balanced, since the even
+                spacing prevents any one color from dominating excessively. These work well for playful, energetic
+                designs that need more than two colors to feel complete.</p>
+        </div>
+
+        <h2>Monochromatic Colors</h2>
+
+        <div class="bio-grid">
+            <h3>Different shades and tints of a single hue</h3>
+            <div class="swatch-row">
+                <div class="swatch" style="background:#1e3a8a;">Dark</div>
+                <div class="swatch" style="background:#3b82f6;">Mid</div>
+                <div class="swatch" style="background:#93c5fd;">Light</div>
+            </div>
+            <p>Monochromatic palettes are nearly impossible to get visually "wrong" since every color shares the same
+                base hue. They create a clean, cohesive, often elegant look, though without careful contrast in
+                lightness and darkness, they can occasionally feel flat.</p>
+        </div>
+
+        <table>
+            <tr>
+                <th>Scheme</th>
+                <th>Best For</th>
+                <th>Risk</th>
+            </tr>
+            <tr>
+                <td>Complementary</td>
+                <td>High contrast, attention-grabbing elements</td>
+                <td>Overwhelming if overused</td>
+            </tr>
+            <tr>
+                <td>Analogous</td>
+                <td>Cohesive, calm designs</td>
+                <td>Can feel monotonous without variety</td>
+            </tr>
+            <tr>
+                <td>Triadic</td>
+                <td>Playful, balanced variety</td>
+                <td>Can clash if proportions are off</td>
+            </tr>
+            <tr>
+                <td>Monochromatic</td>
+                <td>Clean, elegant simplicity</td>
+                <td>Can feel flat without contrast</td>
+            </tr>
+        </table>
+
+        <div class="inline-cta">
+            <p>Ready to start building your own palette? Pick, adjust, and export colors instantly.</p>
+            <a href="../color-picker.html">Try the Color Picker</a>
+        </div>
+
+        <h2>Split-Complementary Colors</h2>
+
+        <div class="bio-grid">
+            <h3>A base color plus the two colors adjacent to its complement</h3>
+            <div class="swatch-row">
+                <div class="swatch" style="background:#2563eb;">Blue</div>
+                <div class="swatch" style="background:#ea580c;">Orange</div>
+                <div class="swatch" style="background:#ca8a04;">Yellow</div>
+            </div>
+            <p>Split-complementary schemes offer much of the visual contrast of a true complementary pair while feeling
+                slightly less intense, since the two accent colors flanking the complement soften the overall effect.
+                This makes it a popular middle ground for designers who want energy without the full visual punch of
+                direct complementary contrast.</p>
+        </div>
+
+        <h2>Warm vs Cool Colors</h2>
+
+        <p>Beyond the color wheel's structural relationships, colors also carry a general emotional temperature. Warm
+            colors, reds, oranges, yellows, tend to feel energetic, urgent, or inviting. Cool colors, blues, greens,
+            purples, tend to feel calm, trustworthy, or professional. Neither is inherently better, the right choice
+            depends entirely on the mood you're trying to create. A fitness brand might lean warm for energy, while a
+            wellness or financial brand might lean cool for calm and trust.</p>
+
+        <h2>The 60-30-10 Rule for Practical Palettes</h2>
+
+        <p>One of the most practical, beginner-friendly rules in applied color theory is the 60-30-10 split: roughly 60%
+            of a design uses a dominant color, usually a neutral background, 30% uses a secondary color, and 10% is
+            reserved for an accent color used sparingly for emphasis, buttons, highlights, or calls to action. This
+            simple ratio prevents the common beginner mistake of using too many strong colors in equal measure, which
+            tends to create visual chaos rather than clear hierarchy.</p>
+
+        <h2>Tips for Choosing Colors Confidently</h2>
+
+        <ul>
+            <li><strong>Start with one color you genuinely like.</strong> Build the rest of your palette around it using
+                one of the harmony rules above rather than picking colors independently.</li>
+            <li><strong>Check contrast for readability.</strong> Text needs enough contrast against its background to
+                remain comfortably readable, regardless of how nice the color combination looks aesthetically.</li>
+            <li><strong>Limit your main palette to three or four colors.</strong> Including a dominant, secondary, and
+                accent color is usually enough; more than that often becomes difficult to manage cohesively.</li>
+            <li><strong>Test in context, not isolation.</strong> A color that looks great as an isolated swatch can look
+                completely different once placed next to your actual content.</li>
+        </ul>
+
+        <h2>Common Color Mistakes Beginners Make</h2>
+
+        <ul>
+            <li><strong>Using too many saturated colors at once.</strong> Several highly saturated colors competing for
+                attention usually overwhelms rather than impresses.</li>
+            <li><strong>Ignoring contrast for text readability.</strong> Light gray text on a white background might
+                look subtle and elegant, but it's often genuinely hard to read.</li>
+            <li><strong>Choosing colors based on personal preference alone, without considering mood or
+                    audience.</strong> A children's brand and a luxury law firm need very different color strategies,
+                regardless of which colors you personally find appealing.</li>
+            <li><strong>Forgetting accessibility.</strong> Certain color combinations are difficult or impossible for
+                color-blind users to distinguish, so it's worth checking contrast and avoiding relying solely on color
+                to convey important information.</li>
+        </ul>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>Do I need design software to apply color theory?</h3>
+            <p>No. A simple color picker tool is enough to explore hue relationships, generate complementary or
+                analogous palettes, and grab exact color codes for use anywhere.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Is there a "correct" color palette for every project?</h3>
+            <p>Not exactly. Color theory provides reliable guidelines for harmony and contrast, but the right palette
+                still depends heavily on the specific mood, audience, and purpose of your project.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Why do some color combinations just look wrong even if they follow the rules?</h3>
+            <p>Color theory rules describe relationships that tend to work well, but factors like saturation, lightness,
+                and the amount of each color used can still throw off an otherwise theoretically sound combination.</p>
+        </div>
+
+        <h2>Final Thoughts</h2>
+
+        <p>Color theory isn't about memorizing rigid rules, it's about understanding why certain color relationships
+            tend to feel pleasant or jarring, so you can make deliberate choices instead of guessing. Once the color
+            wheel and a few core harmony concepts click, picking a palette stops feeling like trial and error and starts
+            feeling like a process you can actually reason through with confidence.</p>
+
+        <p>The next time you sit down to choose colors for something, whether it's a website, a presentation, or a
+            personal project, try starting with one of the harmony schemes above rather than picking colors one at a
+            time. That single change in approach is usually enough to take a palette from "looks okay" to something that
+            genuinely feels intentional and put together.</p>
+
+    </article>
+
+    <div class="related-section">
+        <h2>Related Articles</h2>
+        <div class="related-grid">
+            <a href="complete-unicode-symbols-guide.html" class="related-card">
+                <span>Symbols</span>
+                <h4>The Complete Unicode Symbols Guide</h4>
+            </a>
+            <a href="how-to-create-strong-passwords.html" class="related-card">
+                <span>Password</span>
+                <h4>How to Create Strong Passwords</h4>
+            </a>
+        </div>
+    </div>
+
+    <section class="blog-cta">
+        <h2>Explore Our Free Text Tools</h2>
+        <p>Put what you learned into practice, try our generators, completely free.</p>
+        <a href="../moretools.html" class="cta-btn">Try Textaura Tools</a>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>Textaura</h3>
+                <p>Free Online Text Tools Suite</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <a href="../index.html">Home</a>
+                    <a href="../symbols.html">Symbols</a>
+                    <a href="../qrcode.html">QR Code</a>
+                    <a href="../decorator.html">Decorator</a>
+                </div>
+                <div class="footer-col">
+                    <a href="../moretools.html">More Tools</a>
+                    <a href="../blog.html">Blog</a>
+                    <a href="../about.html">About</a>
+                    <a href="../contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <a href="../policy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 Textaura.org · All rights reserved<br>
+            Bold · Italic · Gothic · Script · Bubble · QR Code · Symbols · Decorator
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+        menuBtn.addEventListener('click', () => navLinks.classList.toggle('show'));
+    </script>
+
+</body>
+
+</html>

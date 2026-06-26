@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How QR Codes Work (Explained Simply) - Textaura</title>
+    <meta name="description"
+        content="Curious what's really happening when you scan a QR code? A simple, beginner-friendly explanation of the technology behind those black and white squares.">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #ffffff;
+            --bg-soft: #f6f7f9;
+            --card-bg: #ffffff;
+            --text: #1a1a2e;
+            --text-soft: #5a5a72;
+            --border: #e4e5ea;
+            --accent: #4f46e5;
+            --radius: 12px;
+            --nav-h: 68px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        header.navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            height: var(--nav-h);
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        nav.nav-links {
+            display: flex;
+            gap: 26px;
+            align-items: center;
+        }
+
+        nav.nav-links a {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-soft);
+        }
+
+        nav.nav-links a:hover,
+        nav.nav-links a.active {
+            color: var(--accent);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .badge-pill {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent);
+            background: #eef0fd;
+            padding: 6px 14px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        @media(max-width:860px) {
+            nav.nav-links {
+                position: fixed;
+                top: var(--nav-h);
+                left: 0;
+                right: 0;
+                background: var(--bg);
+                flex-direction: column;
+                padding: 20px 24px;
+                border-bottom: 1px solid var(--border);
+                display: none;
+                gap: 16px;
+            }
+
+            nav.nav-links.show {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .badge-pill {
+                display: none;
+            }
+        }
+
+        .breadcrumb {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 18px 24px 0;
+            font-size: 13px;
+            color: var(--text-soft);
+        }
+
+        .breadcrumb a {
+            color: var(--accent);
+        }
+
+        .article-header {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 28px 24px 30px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .article-cat {
+            display: inline-block;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--accent);
+            background: #eef0fd;
+            padding: 5px 14px;
+            border-radius: 999px;
+            text-transform: uppercase;
+            letter-spacing: .03em;
+            margin-bottom: 16px;
+        }
+
+        .article-header h1 {
+            font-size: clamp(28px, 4.5vw, 40px);
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 16px;
+        }
+
+        .article-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 14px;
+            color: var(--text-soft);
+        }
+
+        .article-body {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 36px 24px 0;
+        }
+
+        .article-body p {
+            font-size: 16.5px;
+            color: var(--text);
+            margin-bottom: 20px;
+        }
+
+        .article-body h2 {
+            font-size: 26px;
+            font-weight: 800;
+            margin: 42px 0 16px;
+            color: var(--text);
+        }
+
+        .article-body h3 {
+            font-size: 19px;
+            font-weight: 700;
+            margin: 28px 0 12px;
+            color: var(--text);
+        }
+
+        .article-body ul,
+        .article-body ol {
+            margin: 0 0 22px 22px;
+        }
+
+        .article-body li {
+            font-size: 16.5px;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        .article-body strong {
+            font-weight: 700;
+        }
+
+        .bio-grid {
+            background: var(--bg-soft);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .bio-grid h3 {
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 24px;
+            font-size: 15px;
+        }
+
+        table th,
+        table td {
+            border: 1px solid var(--border);
+            padding: 10px 14px;
+            text-align: left;
+        }
+
+        table th {
+            background: var(--bg-soft);
+            font-weight: 700;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 18px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-item h3 {
+            margin: 0 0 8px;
+            font-size: 17px;
+        }
+
+        .faq-item p {
+            margin-bottom: 0;
+            color: var(--text-soft);
+        }
+
+        .inline-cta {
+            background: var(--bg-soft);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 22px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .inline-cta p {
+            margin-bottom: 14px;
+            font-size: 15.5px;
+        }
+
+        .inline-cta a {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            font-weight: 700;
+            font-size: 14.5px;
+            padding: 11px 26px;
+            border-radius: 8px;
+        }
+
+        .related-section {
+            max-width: 760px;
+            margin: 50px auto 0;
+            padding: 30px 24px;
+            border-top: 1px solid var(--border);
+        }
+
+        .related-section h2 {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        @media(max-width:600px) {
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .related-card {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px;
+            display: block;
+        }
+
+        .related-card span {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: .03em;
+        }
+
+        .related-card h4 {
+            font-size: 15.5px;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        .blog-cta {
+            background: var(--bg-soft);
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 54px 24px;
+            margin-top: 50px;
+        }
+
+        .blog-cta h2 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .blog-cta p {
+            color: var(--text-soft);
+            margin-bottom: 22px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            font-weight: 700;
+            font-size: 15px;
+            padding: 13px 30px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            padding: 46px 24px 24px;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-brand h3 {
+            font-size: 19px;
+            font-weight: 800;
+            margin-bottom: 6px;
+            color: var(--accent);
+        }
+
+        .footer-brand p {
+            color: var(--text-soft);
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-col a {
+            display: block;
+            color: var(--text-soft);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            font-size: 13px;
+            color: var(--text-soft);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">Textaura</a>
+            <nav class="nav-links" id="navLinks">
+                <a href="../index.html">Home</a>
+                <a href="../symbols.html">Symbols</a>
+                <a href="../qrcode.html">QR Code</a>
+                <a href="../decorator.html">Decorator</a>
+                <a href="../moretools.html">More Tools</a>
+                <a href="../blog.html" class="active">Blog</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-right">
+                <span class="badge-pill">50+ Styles · Free</span>
+                <button class="menu-btn" id="menuBtn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="../index.html">Home</a> / <a href="../blog.html">Blog</a> / How QR Codes Work
+    </div>
+
+    <div class="article-header">
+        <span class="article-cat">QR Code</span>
+        <h1>How QR Codes Work (Explained Simply)</h1>
+        <div class="article-meta">
+            <span>9 min read</span>
+            <span>Updated 2026</span>
+        </div>
+    </div>
+
+    <article class="article-body">
+
+        <p>There's a particular moment that happens at almost every restaurant table now, someone points their phone at
+            a little black and white square stuck to a menu stand, and a webpage opens up. It happens so fast and so
+            often that most people have stopped wondering how it actually works. I was the same way for years, treating
+            QR codes as just one of those background technologies that simply works, until I actually looked into what
+            those scattered black squares are doing and realized it's a genuinely elegant piece of engineering hiding in
+            plain sight.</p>
+
+        <p>This article breaks down what a QR code actually contains, how your phone reads it in a fraction of a second,
+            and why it's become one of the most reliable, low-cost ways to bridge physical and digital experiences.</p>
+
+        <h2>What a QR Code Actually Is</h2>
+
+        <p>QR stands for "Quick Response," and at its core, a QR code is just a way of storing information, usually a
+            website link, text, or contact details, in a visual pattern that a camera can read almost instantly. Unlike
+            a traditional barcode, which stores data in a single line of varying-width bars, a QR code stores data in a
+            two-dimensional grid, which lets it pack in significantly more information in the same amount of space.</p>
+
+        <p>That two-dimensional structure is the entire reason QR codes can hold so much more than old-style barcodes. A
+            standard barcode can really only encode a short string of numbers, enough for a product ID. A QR code, by
+            contrast, can encode an entire web address, a block of text, or even contact card information, all within a
+            square that's often smaller than a postage stamp.</p>
+
+        <h2>How the Black and White Squares Encode Information</h2>
+
+        <p>Each small square in a QR code's grid, called a module, is either black or white, and that's effectively a
+            binary digit, either a 1 or a 0 depending on color. Your phone's camera and scanning software read the
+            entire grid, convert the pattern of black and white modules back into binary data, and then decode that
+            binary data into readable text, a URL, or whatever information was originally encoded.</p>
+
+        <p>What makes this remarkably reliable is a system called error correction, built directly into the QR code
+            standard. A portion of the grid is dedicated not to the actual data, but to a kind of mathematical backup
+            that lets your phone reconstruct the original information even if part of the code is smudged, scratched, or
+            partially covered. This is also why you'll sometimes see logos placed in the center of QR codes without
+            breaking the scan, the error correction data fills in what the logo covers.</p>
+
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Traditional Barcode</th>
+                <th>QR Code</th>
+            </tr>
+            <tr>
+                <td>Data structure</td>
+                <td>One-dimensional (lines)</td>
+                <td>Two-dimensional (grid)</td>
+            </tr>
+            <tr>
+                <td>Storage capacity</td>
+                <td>Very limited</td>
+                <td>Thousands of characters</td>
+            </tr>
+            <tr>
+                <td>Error correction</td>
+                <td>Minimal</td>
+                <td>Built-in, recovers damaged codes</td>
+            </tr>
+            <tr>
+                <td>Scan angle flexibility</td>
+                <td>Needs straight alignment</td>
+                <td>Readable from multiple angles</td>
+            </tr>
+        </table>
+
+        <h2>The Three Corner Squares You Always See</h2>
+
+        <p>If you look closely at any QR code, you'll notice three larger square patterns in three of the four corners.
+            These aren't decorative, they're positioning markers that tell the scanning software exactly how the code is
+            oriented, even if your phone is held at an angle or slightly rotated. This is part of why QR codes scan so
+            reliably compared to older barcode formats that required much more precise alignment.</p>
+
+        <div class="inline-cta">
+            <p>Want to create your own QR code for a link, text, or contact card? Generate one instantly, free, with no
+                signup required.</p>
+            <a href="../qrcode.html">Try the QR Code Generator</a>
+        </div>
+
+        <h2>What Happens the Moment You Scan One</h2>
+
+        <ol>
+            <li>Your phone's camera captures an image containing the QR code pattern.</li>
+            <li>Scanning software locates the three corner markers to determine orientation and scale.</li>
+            <li>The software reads the grid of black and white modules and converts the pattern into binary data.</li>
+            <li>Error correction data fills in any gaps caused by damage, glare, or partial obstruction.</li>
+            <li>The decoded data, usually a URL, is handed off to your device, which then opens the relevant app or
+                browser.</li>
+        </ol>
+
+        <p>All of this happens in well under a second on a modern smartphone, which is part of why QR codes feel almost
+            instantaneous despite the genuinely complex decoding process happening behind the scenes.</p>
+
+        <h2>Why QR Codes Became So Popular</h2>
+
+        <p>QR codes existed for decades before becoming a daily habit for most people. Their recent surge in popularity
+            is largely tied to two things: smartphones gained native QR scanning built directly into their cameras,
+            removing the need for a separate app, and the need for contactless interactions during recent years pushed
+            restaurants, retailers, and event organizers to adopt them at scale. Once that habit formed, QR codes stuck
+            around because they're genuinely useful, low-cost to produce, and require no special hardware beyond a phone
+            everyone already carries.</p>
+
+        <h2>Tips for Creating QR Codes That Scan Reliably</h2>
+
+        <ul>
+            <li><strong>Keep enough contrast.</strong> Light gray on white or dark colors on dark backgrounds often fail
+                to scan reliably, even if they look fine to the human eye.</li>
+            <li><strong>Leave white space around the code.</strong> A QR code crammed right up against other design
+                elements can confuse scanning software trying to locate its edges.</li>
+            <li><strong>Test before printing or publishing.</strong> Always scan your own QR code with multiple devices
+                before relying on it for something important like a printed menu or business card.</li>
+            <li><strong>Avoid overly long URLs.</strong> Longer encoded data requires a denser, more complex grid, which
+                can be harder to scan from a distance or at a small size.</li>
+        </ul>
+
+        <h2>Common Mistakes With QR Codes</h2>
+
+        <ul>
+            <li><strong>Making the code too small.</strong> A QR code printed at a tiny size becomes difficult for
+                cameras to focus on and resolve clearly.</li>
+            <li><strong>Adding a logo that covers too much of the grid.</strong> Error correction can handle some
+                obstruction, but a large logo can push past what the code can reliably recover from.</li>
+            <li><strong>Linking to a page that later gets taken down.</strong> A QR code is permanent once printed, but
+                the destination it points to isn't, so it's worth using a stable, long-term link.</li>
+        </ul>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>Do QR codes expire?</h3>
+            <p>A static QR code itself doesn't expire, the pattern will always decode to the same data. However, if that
+                data is a URL pointing to a webpage that gets removed or changed, the code becomes functionally useless
+                even though it still scans correctly.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can a QR code contain a virus?</h3>
+            <p>A QR code itself can't contain malicious code, it's just encoded text. However, it can encode a link to a
+                malicious website, so the same caution you'd apply to any unfamiliar link applies to QR codes too.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Do I need a special app to scan a QR code?</h3>
+            <p>Most modern smartphones have QR scanning built directly into the native camera app, so a separate app
+                usually isn't necessary anymore.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How much data can a QR code actually hold?</h3>
+            <p>Depending on the version and error correction level, a QR code can hold several thousand characters of
+                text, though practical use cases like URLs typically use far less than the maximum capacity.</p>
+        </div>
+
+        <h2>Final Thoughts</h2>
+
+        <p>A QR code looks like a random scattering of black and white squares, but every part of that pattern is doing
+            deliberate work, storing data, marking orientation, and protecting against damage, all within a space
+            smaller than a business card. Once you understand the basic mechanics, it's hard not to appreciate just how
+            much engineering went into making something that now feels almost too simple to think twice about.</p>
+
+    </article>
+
+    <div class="related-section">
+        <h2>Related Articles</h2>
+        <div class="related-grid">
+            <a href="qr-code-marketing-guide.html" class="related-card">
+                <span>QR Code</span>
+                <h4>QR Code Marketing Guide for 2026</h4>
+            </a>
+            <a href="best-uses-of-qr-codes-for-small-businesses.html" class="related-card">
+                <span>QR Code</span>
+                <h4>Best Uses of QR Codes for Small Businesses</h4>
+            </a>
+            <a href="unicode-text-explained.html" class="related-card">
+                <span>Fancy Text</span>
+                <h4>Unicode Text Explained (Beginner Friendly)</h4>
+            </a>
+            <a href="complete-unicode-symbols-guide.html" class="related-card">
+                <span>Symbols</span>
+                <h4>The Complete Unicode Symbols Guide</h4>
+            </a>
+        </div>
+    </div>
+
+    <section class="blog-cta">
+        <h2>Explore Our Free Text Tools</h2>
+        <p>Put what you learned into practice, try our generators, completely free.</p>
+        <a href="../moretools.html" class="cta-btn">Try Textaura Tools</a>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>Textaura</h3>
+                <p>Free Online Text Tools Suite</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <a href="../index.html">Home</a>
+                    <a href="../symbols.html">Symbols</a>
+                    <a href="../qrcode.html">QR Code</a>
+                    <a href="../decorator.html">Decorator</a>
+                </div>
+                <div class="footer-col">
+                    <a href="../moretools.html">More Tools</a>
+                    <a href="../blog.html">Blog</a>
+                    <a href="../about.html">About</a>
+                    <a href="../contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <a href="../policy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 Textaura.org · All rights reserved<br>
+            Bold · Italic · Gothic · Script · Bubble · QR Code · Symbols · Decorator
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+        menuBtn.addEventListener('click', () => navLinks.classList.toggle('show'));
+    </script>
+
+</body>
+
+</html>
